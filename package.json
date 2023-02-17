@@ -1,6 +1,8 @@
 {
   "name": "music-capstone",
   "version": "0.1.0",
+  "main": "server/index.js", 
+  "proxy": "http://localhost:4040/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
