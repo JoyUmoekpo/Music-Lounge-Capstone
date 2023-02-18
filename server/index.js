@@ -5,9 +5,9 @@ const cors = require("cors");
 
 const { PORT } = process.env;
 const { sequelize } = require("./util/database");
-const { User } = require("./models/user");
 const { register, login } = require("./controllers/auth");
-const { isAuthenticated } = require("./middleware/isAuthenticated");
+// const { isAuthenticated } = require("./middleware/isAuthenticated");
+// const { User } = require("./models/user");
 
 const app = express();
 
