@@ -17,7 +17,8 @@ const Header = () => {
 	return (
 		<header className={`${styles.header} ${styles.row}`}>
 			<div className={styles.row}>
-				<h2>Welcome</h2>
+			{/* <img src={logo} alt='dm-logo' className='logo'/> */}
+			<mark>[Logo]</mark>
 			</div>
 			<nav>
 				{authCtx.token ? (
