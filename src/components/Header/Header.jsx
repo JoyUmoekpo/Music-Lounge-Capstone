@@ -10,7 +10,7 @@ const Header = () => {
 
 	const styleActiveLink = ({ isActive }) => {
 		return {
-			color: isActive ? "#f57145" : "",
+			color: isActive ? "#1CAC78" : "",
 		};
 	};
 
