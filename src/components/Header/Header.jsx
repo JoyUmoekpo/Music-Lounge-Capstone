@@ -15,13 +15,13 @@ const Header = () => {
 	};
 
 	return (
-		<header>
-			<div>
-				<h2 className={styles.header}>Welcome</h2>
+		<header className={`${styles.header} ${styles.row}`}>
+			<div className={styles.row}>
+				<h2>Welcome</h2>
 			</div>
 			<nav>
 				{authCtx.token ? (
-					<ul className="main-nav">
+					<ul className={styles.main_nav}>
 						<li>
 							<NavLink style={styleActiveLink} to="/">
 								Home
@@ -33,13 +33,13 @@ const Header = () => {
 							</NavLink>
 						</li>
 						<li>
-							<button className="logout-btn" onClick={() => authCtx.logout()}>
+							<button className={styles.logout_btn} onClick={() => authCtx.logout()}>
 								Logout
 							</button>
 						</li>
 					</ul>
 				) : (
-					<ul className="main-nav">
+					<ul className={styles.main_nav}>
 						<li>
 							<NavLink style={styleActiveLink} to="/">
 								Home
