@@ -4,8 +4,6 @@ const { User } = require("../models/user");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
-// react_app_VariableName
-
 const createToken = (username, id) => {
 	return jwt.sign(
 		{
