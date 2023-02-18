@@ -22,7 +22,7 @@ sequelize
 	.then(() => {
 		app.listen(PORT, () =>
 			console.log(
-				`Connection successful. The server is running on port ${PORT}`
+				`Connection successful. Server running on port ${PORT}`
 			)
 		);
 	})
