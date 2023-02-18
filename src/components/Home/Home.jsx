@@ -16,7 +16,6 @@ const Home = () => {
 			</div>
 			<div className={styles.home_text}>
 				<summary className={styles.home_text_background}>
-					{" "}
 					[App Description]
 				</summary>
 			</div>
