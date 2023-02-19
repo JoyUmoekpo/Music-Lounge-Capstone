@@ -3,6 +3,8 @@ import axios from 'axios'
 
 import AuthContext from '../../store/authContext';
 
+import styles from './Auth.module.css'
+
 const Auth = () => {
     const [register, setRegister] = useState(true)
     const [username, setUsername] = useState('')
@@ -40,26 +42,26 @@ const Auth = () => {
 
     return (
         <main>
-            <h1>Welcome!</h1>
-            <form className='form auth-form' onSubmit={submitHandler}>
+            <h1>{register ? 'Sign Up Page' : 'Login Page'}</h1>
+            <form className={`${styles.form} ${styles.auth_form}`} onSubmit={submitHandler}>
                 <input 
                     type='text' 
-                    placeholder='username' 
+                    placeholder='Enter your username' 
                     value={username}
                     onChange={e => setUsername(e.target.value)}
-                    className='form-input'/>
+                    className={styles.form_input}/>
                 <input 
                     type='password' 
-                    placeholder='password' 
+                    placeholder='Enter your password' 
                     value={password}
                     onChange={e => setPassword(e.target.value)}
-                    className='form-input'/>
-                <button className='form-btn'>
+                    className={styles.form_input}/>
+                <button className={styles.form_btn}>
                     {register ? 'Sign Up' : 'Login'}
                 </button>
             </form>
-            <p style={{display: display}} className='auth-msg'>{message}</p>
-            <button className='form-btn' onClick={() => setRegister(!register)}>
+            <p style={{display: display}} className={styles.auth_msg}>{message}</p>
+            <button className={styles.form_btn} onClick={() => setRegister(!register)}>
                 Need to {register ? 'Login' : 'Sign Up'}?
             </button>
         </main>
