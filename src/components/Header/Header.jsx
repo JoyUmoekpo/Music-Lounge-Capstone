@@ -48,7 +48,7 @@ const Header = () => {
 						</li>
 						<li>
 							<NavLink style={styleActiveLink} to="/auth">
-								Login or Sign Up
+								Register
 							</NavLink>
 						</li>
 					</ul>
