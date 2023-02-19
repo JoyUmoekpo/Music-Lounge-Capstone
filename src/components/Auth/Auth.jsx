@@ -42,7 +42,7 @@ const Auth = () => {
 
     return (
         <main>
-            <h1>{register ? 'Sign Up Page' : 'Login Page'}</h1>
+            <h1>{register ? 'Sign Up' : 'Login'}</h1>
             <form className={`${styles.form} ${styles.auth_form}`} onSubmit={submitHandler}>
                 <input 
                     type='text' 
