@@ -1,10 +1,10 @@
-button {
+.profile_button {
   background-color: var(--tertiary);
   border: white 5px double;
   padding: 25px;
 }
 
-.profile_buttons {
+.profile_button_container {
   display: flex;
   justify-content: space-around;  
   align-items: center;
