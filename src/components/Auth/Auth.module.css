@@ -16,12 +16,16 @@
 
 .form_input {
 	background: transparent;
-  background-color: var(--secondary);
+  /* background-color: var(--secondary); */
 	border: 1px solid white;
   border-radius: 25px;
 	color: #f0f0f0;
   padding: 20px;
   text-align: center;
+}
+
+.form_input:focus {
+	background-color: rgba(4, 255, 4, 0.435);
 }
 
 ::placeholder {
