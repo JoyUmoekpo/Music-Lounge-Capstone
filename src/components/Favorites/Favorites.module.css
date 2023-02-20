@@ -1,0 +1,19 @@
+.title {
+  text-align: center;
+  margin-top: 25px;
+  margin-left: 250px;
+  font-size: 50px;
+}
+
+.favorites_container {
+  margin-top: 25px;
+  margin-left: 250px;
+  width: 875px;
+  height: 300px;
+}
+
+.favorite {
+  background-color: var(--favorites);
+  color: var(--primary);
+  margin: 5px;
+}
