@@ -15,7 +15,7 @@ const Home = () => {
 		<div
 			style={{
 				backgroundImage: `url(${background})`,
-				height: "85vh",
+				height: "80vh",
 			}}>
 			<div className={styles.home_text}>
 				<main className={styles.home_text_background}>
