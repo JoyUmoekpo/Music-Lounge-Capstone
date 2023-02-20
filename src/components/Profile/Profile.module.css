@@ -1,4 +1,13 @@
-.profile {
-  color: white;
-  font-size: 500px;
+button {
+  background-color: var(--tertiary);
+  border: white 5px double;
+  padding: 25px;
+}
+
+.profile_buttons {
+  display: flex;
+  justify-content: space-around;  
+  align-items: center;
+  margin-top: 100px;  
+  margin-left: 225px;
 }
