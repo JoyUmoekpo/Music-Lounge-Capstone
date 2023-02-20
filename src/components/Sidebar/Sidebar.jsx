@@ -20,26 +20,22 @@ const Sidebar = () => {
 					<ul className={styles.sidebar_contents}>
 						<li className={styles.sidebar_links}>
 							<NavLink style={styleActiveLink} to="profile">
-								<button>Profile</button> 
+								<button className={styles.sidebar_buttons}>Profile</button>
 							</NavLink>
 						</li>
 						<li className={styles.sidebar_links}>
 							<NavLink style={styleActiveLink} to="playlist">
-              <button>Playlist</button> 
+								<button className={styles.sidebar_buttons}>Playlist</button>
 							</NavLink>
 						</li>
 						<li className={styles.sidebar_links}>
 							<NavLink style={styleActiveLink} to="favorites">
-              <button>Favorites</button> 
+								<button className={styles.sidebar_buttons}>Favorites</button>
 							</NavLink>
 						</li>
 					</ul>
 				) : (
-					<ul>
-						<li className={styles.sidebar_links}></li>
-						<li className={styles.sidebar_links}></li>
-						<li className={styles.sidebar_links}></li>
-					</ul>
+					""
 				)}
 			</nav>
 		</div>

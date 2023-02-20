@@ -1,7 +1,4 @@
 .sidebar {
-  /* background-color: maroon; */
-  /* height: 50px;
-  width: 100%; */
   background: var(--secondary);
   position: fixed;
   top: 80px;
@@ -15,10 +12,23 @@
 .sidebar_contents {
   display: flex;
   flex-direction: column;
-  padding: 75px;
   list-style-type: none;
+  padding: 50px;
+  margin-top: 75px;
 }
 
 .sidebar_links {
   margin-bottom: 50px;
+}
+
+.sidebar_buttons {
+  background-color: #696969;
+  color: #fff;
+  border: none;
+  width: 100px;
+  padding: 10px;
+}
+
+.sidebar_buttons:focus {
+background-color: #000;
 }
