@@ -24,9 +24,7 @@ const Header = () => {
 				{authCtx.token ? (
 					<ul className={styles.main_nav}>
 						<li>
-							<NavLink style={styleActiveLink} to="/profile">
-								Profile
-							</NavLink>
+							<div>[Username / ID]</div>
 						</li>
 						<li>
 							<button className={styles.logout_btn} onClick={() => authCtx.logout()}>
