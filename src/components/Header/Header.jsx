@@ -24,7 +24,7 @@ const Header = () => {
 				{authCtx.token ? (
 					<ul className={styles.main_nav}>
 						<li>
-							<NavLink style={styleActiveLink} to="profile">
+							<NavLink style={styleActiveLink} to="/profile">
 								Profile
 							</NavLink>
 						</li>

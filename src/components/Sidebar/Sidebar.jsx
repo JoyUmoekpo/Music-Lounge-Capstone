@@ -19,17 +19,17 @@ const Sidebar = () => {
 				{authCtx.token ? (
 					<ul className={styles.sidebar_contents}>
 						<li className={styles.sidebar_links}>
-							<NavLink style={styleActiveLink} to="profile">
+							<NavLink style={styleActiveLink} to="/profile">
 								<button className={styles.sidebar_buttons}>Profile</button>
 							</NavLink>
 						</li>
 						<li className={styles.sidebar_links}>
-							<NavLink style={styleActiveLink} to="playlist">
+							<NavLink style={styleActiveLink} to="/playlist">
 								<button className={styles.sidebar_buttons}>Playlist</button>
 							</NavLink>
 						</li>
 						<li className={styles.sidebar_links}>
-							<NavLink style={styleActiveLink} to="favorites">
+							<NavLink style={styleActiveLink} to="/favorites">
 								<button className={styles.sidebar_buttons}>Favorites</button>
 							</NavLink>
 						</li>
