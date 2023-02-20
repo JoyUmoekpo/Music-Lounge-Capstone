@@ -22,7 +22,7 @@
 }
 
 .sidebar_buttons {
-  background-color: #696969;
+  background-color: var(--gray);
   color: #fff;
   border: none;
   width: 100px;
