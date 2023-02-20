@@ -1,10 +1,19 @@
-import React from 'react'
-import styles from './Playlist.module.css'
+import React, { Fragment } from "react";
+import styles from "./Playlist.module.css";
 
 const Playlist = () => {
-  return (
-    <div>Playlist</div>
-  )
-}
+	return (
+		<Fragment>
+			<div className={styles.title}>[User's] Playlists</div>
+			<div className={styles.playlists_container}>
+				<div className={styles.playlists}>Playlist Name</div>
+				<div className={styles.playlists}>Playlist Name</div>
+				<div className={styles.playlists}>Playlist Name</div>
+				<div className={styles.playlists}>Playlist Name</div>
+				<div className={styles.playlists}>Playlist Name</div>
+			</div>
+		</Fragment>
+	);
+};
 
-export default Playlist
+export default Playlist;

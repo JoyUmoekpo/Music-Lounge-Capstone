@@ -1,0 +1,29 @@
+.title {
+  text-align: center;
+  margin-top: 25px;
+  margin-left: 250px;
+  font-size: 50px;
+}
+
+.playlists_container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 25px;
+  margin-left: 425px;
+  width: 550px;
+  height: 300px;
+  /* padding: 250px; */
+}
+
+.playlists {
+  background-color: var(--gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-right: 50px;
+  width: 125px;
+  height: 125px;
+}
