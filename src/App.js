@@ -9,6 +9,8 @@ import Header from './components/Header/Header';
 import Sidebar from './components/Sidebar/Sidebar';
 import Footer from './components/Footer/Footer';
 import Profile from './components/Profile/Profile';
+import Playlist from './components/Playlist/Playlist';
+import Favorites from './components/Favorites/Favorites';
 import AuthContext from './store/authContext';
 
 const App = () => {
@@ -23,6 +25,8 @@ const App = () => {
         <Route path='/' element={<Home/>}/>
         <Route path='/auth' element={!authCtx.token ? <Auth/> : <Navigate to='/'/>}/>
         <Route path='/profile' element={authCtx.token ?<Profile/> : <Navigate to='/auth'/>}/>
+        <Route path='/playlist' element={authCtx.token ? <Playlist />: <Navigate to='/auth' />}/>
+        <Route path='/favorites' element={authCtx.token ? <Favorites />: <Navigate to='/auth' />}/>
         <Route path='*' element={<Navigate to='/'/>}/>
         </Routes>
         <Footer/>
