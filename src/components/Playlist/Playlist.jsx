@@ -6,11 +6,11 @@ const Playlist = () => {
 		<Fragment>
 			<div className={styles.title}>[User's] Playlists</div>
 			<div className={styles.playlists_container}>
-				<div className={styles.playlists}>Playlist Name</div>
-				<div className={styles.playlists}>Playlist Name</div>
-				<div className={styles.playlists}>Playlist Name</div>
-				<div className={styles.playlists}>Playlist Name</div>
-				<div className={styles.playlists}>Playlist Name</div>
+				<div className={styles.playlists}>Playlist</div>
+				<div className={styles.playlists}>Playlist</div>
+				<div className={styles.playlists}>Playlist</div>
+				<div className={styles.playlists}>Playlist</div>
+				<div className={styles.playlists}>Playlist</div>
 			</div>
 		</Fragment>
 	);
