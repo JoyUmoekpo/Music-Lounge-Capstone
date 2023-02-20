@@ -11,3 +11,14 @@
   padding: 20px 0;
   transition: all 0.5s ease;
 }
+
+.sidebar_contents {
+  display: flex;
+  flex-direction: column;
+  padding: 75px;
+  list-style-type: none;
+}
+
+.sidebar_links {
+  margin-bottom: 50px;
+}

@@ -17,28 +17,28 @@ const Sidebar = () => {
 		<div className={styles.sidebar}>
 			<nav>
 				{authCtx.token ? (
-					<ul>
-						<li>
+					<ul className={styles.sidebar_contents}>
+						<li className={styles.sidebar_links}>
 							<NavLink style={styleActiveLink} to="profile">
-								Profile
+								<button>Profile</button> 
 							</NavLink>
 						</li>
-						<li>
+						<li className={styles.sidebar_links}>
 							<NavLink style={styleActiveLink} to="playlist">
-								Playlists
+              <button>Playlist</button> 
 							</NavLink>
 						</li>
-						<li>
+						<li className={styles.sidebar_links}>
 							<NavLink style={styleActiveLink} to="favorites">
-								Favorites
+              <button>Favorites</button> 
 							</NavLink>
 						</li>
 					</ul>
 				) : (
 					<ul>
-						<li></li>
-						<li></li>
-						<li></li>
+						<li className={styles.sidebar_links}></li>
+						<li className={styles.sidebar_links}></li>
+						<li className={styles.sidebar_links}></li>
 					</ul>
 				)}
 			</nav>
