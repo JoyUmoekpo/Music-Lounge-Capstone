@@ -1,0 +1,14 @@
+.title {
+  text-align: center;
+  margin-top: 25px;
+  margin-left: 250px;
+  font-size: 50px;
+}
+
+.player_container {
+  background-color: var(--secondary);
+  height: 300px;
+  width: 700px;
+  margin-top: 50px;
+  margin-left: 350px;
+}

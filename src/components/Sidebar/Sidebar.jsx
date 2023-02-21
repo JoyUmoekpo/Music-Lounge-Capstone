@@ -33,6 +33,11 @@ const Sidebar = () => {
 								<button className={styles.sidebar_buttons}>Favorites</button>
 							</NavLink>
 						</li>
+						<li className={styles.sidebar_links}>
+							<NavLink style={styleActiveLink} to="/player">
+								<button className={styles.sidebar_buttons}>Player</button>
+							</NavLink>
+						</li>
 					</ul>
 				) : (
 					""

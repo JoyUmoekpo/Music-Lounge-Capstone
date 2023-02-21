@@ -32,6 +32,7 @@ const Profile = (song) => {
 				<NavLink to="/favorites">
 					<button className={styles.profile_button}>See your favorites</button>
 				</NavLink>
+				{/* Add button for Player */}
 			</div>
 			<Searchbar songs={songs}/>
 		</Fragment>
