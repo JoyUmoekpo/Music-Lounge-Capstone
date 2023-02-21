@@ -7,8 +7,18 @@
 
 .player_container {
   background-color: var(--secondary);
-  height: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 75px;
   width: 700px;
-  margin-top: 50px;
+  margin-top: 25px;
   margin-left: 350px;
+}
+
+.player_icons {
+  margin: 25px;
+}
+
+.song_info {
 }
