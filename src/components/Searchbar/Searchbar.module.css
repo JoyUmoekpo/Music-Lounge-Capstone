@@ -5,8 +5,8 @@
 }
 
 .search_bar {
-  background-color: #FED8B1;
-  color: gray;
+  background-color: var(--secondary);
+  color: var(--gray);
   font-size: 15px;
   font-weight: 500;
   border: none;
@@ -15,7 +15,7 @@
 }
 
 .search_icon {
-  background-color: #FED8B1;
+  background-color: var(--secondary);
   border-radius: 20px 0 0 20px;
   padding: 3px;
 }
