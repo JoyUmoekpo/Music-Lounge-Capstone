@@ -12,16 +12,31 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>Music Capstone</title>
-
+    <script src="https://e-cdns-files.dzcdn.net/js/min/dz.js"></script>
+  </head>
+  
+  <body>
     <!-- Deezer JS SNK -->
     <div id="dz-root"></div>
-    <script src="https://e-cdns-files.dzcdn.net/js/min/dz.js"></script>
+    <script>
+      window.dzAsyncInit = function() {
+      DZ.init({
+      appId  : '583764',
+      channelUrl : 'localhost:4040/channel.html'
+      });
+      };
+
+      (function() {
+      var e = document.createElement('script');
+      e.src = 'https://e-cdn-files.dzcdn.net/js/min/dz.js';
+      e.async = true;
+      document.getElementById('dz-root').appendChild(e);
+      }());
+    </script>
+
     <!---->
 
-  </head>
-  <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-
   </body>
 </html>
