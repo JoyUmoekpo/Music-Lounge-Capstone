@@ -1,9 +1,26 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import axios from "axios";
+
+import Searchbar from '../Searchbar/Searchbar'
 
 import styles from "./Profile.module.css";
 
-const Profile = () => {
+const Profile = (song) => {
+	const [songs, setSongs] = useState([]);
+
+	let url = `https://api.deezer.com/search?q=${song}`
+	const getSongs = () => {
+		axios.get(url).then((res) => {
+			setSongs(res.data);
+			console.log(res.data);
+		});
+	};
+
+	useEffect(() => {
+		getSongs();
+	}, []);
+
 	return (
 		<Fragment>
 			<div className={styles.title}>[User's] Profile Page</div>
@@ -16,6 +33,7 @@ const Profile = () => {
 					<button className={styles.profile_button}>See your favorites</button>
 				</NavLink>
 			</div>
+			{/* <Searchbar songs={songs}/> */}
 		</Fragment>
 	);
 };

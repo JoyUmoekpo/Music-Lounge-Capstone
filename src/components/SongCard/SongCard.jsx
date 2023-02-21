@@ -7,7 +7,7 @@ const SongCard = ({song}) => {
 	const navigate = useNavigate();
 
 	const handleClick = () => {
-		navigate(`https://api.deezer.com/search?q=${song}`);
+		navigate(``);
 	};
 
 	return (

@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import SongCard from "../SongCard/SongCard";
 import { BiSearch } from "react-icons/bi";
 
-import styles from "./SearchBar.module.css";
+import styles from "./Searchbar.module.css";
 
 const SearchBar = ({ songs }) => {
 	const [search, setSearch] = useState("");
 
 	const songDisplay = songs
 		.filter((song, index) => {
-			let title = song.song_name.toLowerCase();
+			let title = song.title.toLowerCase();
 			let searchParams = search.toLowerCase();
 			return title.includes(searchParams);
 		})
