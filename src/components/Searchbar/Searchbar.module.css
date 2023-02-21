@@ -34,4 +34,13 @@
 
 ::placeholder {
   text-align: center;
+  opacity: 0.3;
+}
+
+input[type="text"] {
+  color: white;
+}
+
+input:focus {
+  outline: none;
 }
