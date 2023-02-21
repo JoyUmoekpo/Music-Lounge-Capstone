@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 import SongCard from "../SongCard/SongCard";
 import { BiSearch } from "react-icons/bi";
+import axios from 'axios';
 
 import styles from "./Searchbar.module.css";
 
 const SearchBar = ({ songs }) => {
 	const [search, setSearch] = useState("");
+
+	axios.get("http://localhost:4040/search/sydney+renae")
+	.then(res => 
+		console.log(res)) 
 
 	const songDisplay = songs
 		.filter((song, index) => {
@@ -25,7 +30,7 @@ const SearchBar = ({ songs }) => {
 					type="text"
 					value={search}
 					onChange={(e) => setSearch(e.target.value)}
-					placeholder="Search for a song"
+					placeholder="Search for a song or artist"
 					className={styles.search_bar}
 				/>
 			</div>

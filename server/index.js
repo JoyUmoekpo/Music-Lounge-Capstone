@@ -2,6 +2,7 @@ require("dotenv").config();
 
 const express = require("express");
 const cors = require("cors");
+const axios = require("axios");
 
 const { PORT } = process.env;
 const { sequelize } = require("./util/database");
@@ -31,13 +32,26 @@ app.get("/userplaylists/:userId", getCurrentUserPlaylists);
 app.post("/playlists", isAuthenticated, addPlaylist);
 app.delete("/playlists/:id", isAuthenticated, deletePlaylist);
 
+
+app.get("/search/:search_item", (req, res) => {
+	const title = req.params.search_item;
+
+	axios
+		.get(`https://api.deezer.com/search?q=${title}`)
+		.then((response) => {
+			res.setHeader("Access-Control-Allow-Origin", "*");
+			res.setHeader("Access-Control-Allow-Methods", "*");
+			res.setHeader("Access-Control-Allow-Header", "*");
+			res.send(response.data);
+		})
+		.catch();
+});
+
 sequelize
 	.sync({ force: true })
 	.then(() => {
 		app.listen(PORT, () =>
-			console.log(
-				`Connection successful. Server running on port ${PORT}`
-			)
+			console.log(`Connection successful. Server running on port ${PORT}`)
 		);
 	})
 	.catch((err) => console.log(err));
