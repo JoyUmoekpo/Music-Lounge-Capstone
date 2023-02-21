@@ -1,0 +1,30 @@
+.card {
+  width: 200px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 30px;
+  margin-top: 15px;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.6);
+}
+
+.song_image {
+  width: 200px;
+  height: 100px;
+}
+
+.song_text {
+  font-size: small;
+  font-weight: 400;
+  text-align: center;
+}
+
+button {
+  color: var(--secondary);
+  background-color: #7BA09B;
+  margin-top: 1px;
+  padding: 5px;
+  border: none;
+}
