@@ -40,7 +40,7 @@ getCurrentUserPlaylists: async (req, res) => {
 
 	addPlaylist: async (req, res) => {
 		try {
-				const {title, content, status, userId} = req.body
+				const {title, content, userId} = req.body
 				await Playlist.create({title, content, userId})
 				res.sendStatus(200)
 		} catch (error) {
