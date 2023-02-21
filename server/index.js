@@ -8,8 +8,7 @@ const cors = require("cors");
 const { sequelize } = require("./util/database");
 const { register, login } = require("./controllers/auth");
 const { getAllPlaylists, getCurrentUserPlaylists, addPlaylist, deletePlaylist} = require("./controllers/playlists");
-const search = require("./controllers/search");
-
+const { search } = require("./controllers/search");
 const { isAuthenticated } = require("./middleware/isAuthenticated");
 const { User } = require("./models/user");
 const { Playlist } = require("./models/playlist");
@@ -31,7 +30,7 @@ app.delete("/playlists/:id", isAuthenticated, deletePlaylist);
 app.get("/search/:search_item", search);
 
 sequelize
-	.sync({ force: true })
+	.sync()
 	.then(() => {
 		app.listen(PORT, () =>
 			console.log(`Connection successful. Server running on port ${PORT}`)

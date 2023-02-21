@@ -44,3 +44,7 @@ input[type="text"] {
 input:focus {
   outline: none;
 }
+
+.search_button {
+  margin-left: 500px
+}
