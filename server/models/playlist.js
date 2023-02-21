@@ -11,6 +11,5 @@ module.exports = {
         },
         title: DataTypes.STRING,
         content: DataTypes.TEXT,
-        privateStatus: DataTypes.BOOLEAN
     })
 };

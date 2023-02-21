@@ -11,7 +11,6 @@ const {
 	getAllPlaylists,
 	getCurrentUserPlaylists,
 	addPlaylist,
-	editPlaylist,
 	deletePlaylist,
 } = require("./controllers/playlists");
 const { User } = require("./models/user");
@@ -30,7 +29,6 @@ app.post("/login", login);
 app.get("/playlists", getAllPlaylists);
 app.get("/userplaylists/:userId", getCurrentUserPlaylists);
 app.post("/playlists", isAuthenticated, addPlaylist);
-app.put("/playlists/:id", isAuthenticated, editPlaylist);
 app.delete("/playlists/:id", isAuthenticated, deletePlaylist);
 
 sequelize
