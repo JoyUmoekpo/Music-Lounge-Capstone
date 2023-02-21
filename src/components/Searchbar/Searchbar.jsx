@@ -20,7 +20,7 @@ const SearchBar = ({ songs }) => {
 	return (
 		<div>
 			<div className={styles.search}>
-				<BiSearch className={styles.search_icon} color="#DA7635"/>
+				<BiSearch className={styles.search_icon} color="#fff"/>
 				<input
 					type="text"
 					value={search}
