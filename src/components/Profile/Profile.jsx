@@ -33,7 +33,7 @@ const Profile = (song) => {
 					<button className={styles.profile_button}>See your favorites</button>
 				</NavLink>
 			</div>
-			{/* <Searchbar songs={songs}/> */}
+			<Searchbar songs={songs}/>
 		</Fragment>
 	);
 };

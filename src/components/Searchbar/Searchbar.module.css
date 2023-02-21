@@ -1,7 +1,8 @@
 .search {
   display: flex;
   justify-content: center;
-  padding-top: 5px;
+  padding-top: 50px;
+  margin-left: 225px;
 }
 
 .search_bar {
@@ -23,9 +24,9 @@
 .songs_container {
   display: flex;
   flex-direction: row;
-  gap: 20px;
-  height: 225px;
-  width: 85%;
   overflow: scroll hidden;
-  margin-left: 10%;
+  width: 70%;
+  height: 175px;
+  margin-left: 25%;
+  gap: 20px;
 }
