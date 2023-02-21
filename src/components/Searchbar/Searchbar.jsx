@@ -14,7 +14,7 @@ const SearchBar = ({ songs }) => {
 			return title.includes(searchParams);
 		})
 		.map((song, index) => {
-			return <songCard song={song} />;
+			return <SongCard song={song} />;
 		});
 
 	return (
