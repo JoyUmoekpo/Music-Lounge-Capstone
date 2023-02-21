@@ -5,6 +5,14 @@
   font-size: 50px;
 }
 
+.playlist_button {
+  background-color: var(--gray);
+  color: #fff;
+  text-align: center;
+  margin-top: 25px;
+  margin-left: 625px;
+}
+
 .playlists_container {
   display: flex;
   justify-content: center;

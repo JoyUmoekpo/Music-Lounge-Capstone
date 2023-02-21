@@ -5,12 +5,8 @@ const Playlist = () => {
 	return (
 		<Fragment>
 			<div className={styles.title}>[User's] Playlists</div>
+			<button className={styles.playlist_button}>Create a playlist</button>
 			<div className={styles.playlists_container}>
-				<div className={styles.playlists}>Playlist</div>
-				<div className={styles.playlists}>Playlist</div>
-				<div className={styles.playlists}>Playlist</div>
-				<div className={styles.playlists}>Playlist</div>
-				<div className={styles.playlists}>Playlist</div>
 			</div>
 		</Fragment>
 	);
