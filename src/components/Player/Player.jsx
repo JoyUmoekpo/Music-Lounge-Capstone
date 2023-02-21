@@ -12,7 +12,7 @@ const Player = () => {
 					<BiPlayCircle size={50} />
 					<BiPauseCircle size={50} />
 				</div>
-				<div className={styles.song_info}>Song information</div>
+				<div>Song information</div>
 			</div>
 		</Fragment>
 	);
