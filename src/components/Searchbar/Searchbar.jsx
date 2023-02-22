@@ -42,7 +42,7 @@ const SearchBar = ({ songs }) => {
 				/>
 			<button className={styles.search_button} onClick={submit}>Submit</button>
 			</div>
-			<div className={styles.songs_container}>{songDisplay}</div>
+			<div className={styles.songs_container}><SongCard /></div>
 		</div>
 	);
 };
