@@ -12,6 +12,7 @@ import Profile from './components/Profile/Profile';
 import Playlist from './components/Playlist/Playlist';
 import Favorites from './components/Favorites/Favorites';
 import Player from './components/Player/Player';
+import Recommendations from './components/Recommendations/Recommendations';
 
 import AuthContext from './store/authContext';
 
@@ -30,6 +31,7 @@ const App = () => {
         <Route path='/playlist' element={authCtx.token ? <Playlist />: <Navigate to='/auth' />}/>
         <Route path='/favorites' element={authCtx.token ? <Favorites />: <Navigate to='/auth' />}/>
         <Route path='/player' element={authCtx.token ? <Player />: <Navigate to='/auth' />}/>
+        <Route path='/recommendations' element={authCtx.token ? <Recommendations />: <Navigate to='/auth' />}/>
         <Route path='*' element={<Navigate to='/'/>}/>
         </Routes>
         <Footer/>

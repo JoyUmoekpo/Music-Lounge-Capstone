@@ -38,6 +38,11 @@ const Sidebar = () => {
 								<button className={styles.sidebar_buttons}>Player</button>
 							</NavLink>
 						</li>
+						<li className={styles.sidebar_links}>
+							<NavLink style={styleActiveLink} to="/recommendations">
+								<button className={styles.sidebar_buttons}>Song Recommendations</button>
+							</NavLink>
+						</li>
 					</ul>
 				) : (
 					""
