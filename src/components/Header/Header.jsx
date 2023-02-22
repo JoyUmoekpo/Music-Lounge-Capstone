@@ -24,7 +24,7 @@ const Header = () => {
 				{authCtx.token ? (
 					<ul className={styles.main_nav}>
 						<li>
-							<div>[Username / ID]</div>
+							<div>{authCtx.username}</div>
 						</li>
 						<li>
 							<button className={styles.logout_btn} onClick={() => authCtx.logout()}>

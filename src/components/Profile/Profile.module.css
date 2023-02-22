@@ -17,6 +17,7 @@
   background-color: var(--tertiary);
   color: var(--primary);
   font-size: 20px;
-  border: white 3px solid;
+  border: none;
+  border-radius: 5%;
   padding: 20px;
 }

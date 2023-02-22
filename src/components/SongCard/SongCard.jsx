@@ -13,8 +13,8 @@ const SongCard = ({song}) => {
 						className={styles.song_image}
 					/>
 				</div>
-				<h3 className={styles.song_text}>My Love</h3>
-				<h3 className={styles.song_text}>{song}</h3>
+				<h3 className={styles.song_text}>{song.title_short}</h3>
+				<h3 className={styles.song_text}>{song.artist.name}</h3>
 			</div>
 			<button className={styles.song_button}>Favorite Song</button>
 		</div>
