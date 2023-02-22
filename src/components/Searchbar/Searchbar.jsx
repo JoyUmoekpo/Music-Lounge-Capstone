@@ -15,7 +15,7 @@ const SearchBar = ({ songs }) => {
 			axios
 			.get(`${url}/search/${search}`)
 			.then((res) => {
-				return <SongCard song={songs} />;
+				console.log(res.data);
 			});
 	}
 
