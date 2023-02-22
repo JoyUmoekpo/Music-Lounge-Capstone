@@ -1,5 +1,4 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 
 import styles from "./SongCard.module.css";
 
@@ -15,6 +14,7 @@ const SongCard = ({song}) => {
 					/>
 				</div>
 				<h3 className={styles.song_text}>My Love</h3>
+				<h3 className={styles.song_text}>{song}</h3>
 			</div>
 			<button className={styles.song_button}>Favorite Song</button>
 		</div>

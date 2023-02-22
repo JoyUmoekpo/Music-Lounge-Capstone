@@ -6,10 +6,13 @@ import Searchbar from '../Searchbar/Searchbar'
 
 import styles from "./Profile.module.css";
 
-const Profile = (song) => {
+const Profile = () => {
 	const [songs, setSongs] = useState([]);
 
-	let url = `https://api.deezer.com/search?q=${song}`
+	// let url = "https://api.deezer.com/search?q=kehlani"
+	// let url = "https://api.deezer.com/search/kehlani"
+	let url = "https://api.deezer.com"
+
 	const getSongs = () => {
 		axios.get(url).then((res) => {
 			setSongs(res.data);

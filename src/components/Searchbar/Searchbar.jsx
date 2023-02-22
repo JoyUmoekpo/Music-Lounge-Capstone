@@ -10,22 +10,38 @@ const SearchBar = ({ songs }) => {
 
 	const url = "http://localhost:4040";
 	
-	const submit = () => {
-		console.log(search);
-			axios
-			.get(`${url}/search/${search}`)
-			.then((res) => {
-				console.log(res.data);
+	const submit = (songs) => {
+		axios
+		.get(`${url}/search/${search}`)
+		.then((res) => {
+			console.log(search);
+			// console.log(res.data);
+				console.log(res.data.data);
+				console.log(res.data.data[0].artist.name);
+				console.log(res.data.data[0].title_short);
+				console.log(res.data.data[1].title_short);
+				console.log(res.data.data[2].title_short);
+				console.log(res.data.data[3].title_short);
+				console.log(res.data.data[4].title_short);
+				console.log(res.data.data[5].title_short);
+				console.log(res.data.data[6].title_short);
+				console.log(res.data.data[7].title_short);
+
+				console.log(res.data.data[0].album.cover);
+				// setSearch("");
 			});
 	}
 
+// Try post request
+const handleClick = () => {
+	const container = document.querySelector('.song_contianer')
+	const hello = "hello";
+	
+	
+}
+
 	const songDisplay = songs
-		.filter((song, index) => {
-			let title = song.title.toLowerCase();
-			let searchParams = search.toLowerCase();
-			return title.includes(searchParams);
-		})
-		.map((song, index) => {
+		.map((song) => {
 			return <SongCard song={song} />;
 		});
 
