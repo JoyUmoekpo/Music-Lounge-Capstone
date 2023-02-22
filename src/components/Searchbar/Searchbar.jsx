@@ -15,8 +15,8 @@ const SearchBar = ({ songs }) => {
 			axios
 			.get(`${url}/search/${search}`)
 			.then((res) => {
-				console.log(res, 'onSubmit triggered')
-				});
+				return <SongCard song={songs} />;
+			});
 	}
 
 	const songDisplay = songs
@@ -40,8 +40,8 @@ const SearchBar = ({ songs }) => {
 					placeholder="Search for a song or artist"
 					className={styles.search_bar}
 				/>
-			</div>
 			<button className={styles.search_button} onClick={submit}>Submit</button>
+			</div>
 			<div className={styles.songs_container}>{songDisplay}</div>
 		</div>
 	);

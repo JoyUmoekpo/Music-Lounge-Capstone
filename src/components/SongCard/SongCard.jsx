@@ -7,7 +7,7 @@ const SongCard = ({song}) => {
 	const navigate = useNavigate();
 
 	const handleClick = () => {
-		navigate(``);
+		navigate(`/search/${song.data.data.id}`);
 	};
 
 	return (
@@ -16,7 +16,7 @@ const SongCard = ({song}) => {
 				<div>
 					<img
 						src={`${song.picture_small}`}
-						alt="Snack"
+						alt="Song"
 						className={styles.song_image}
 					/>
 				</div>

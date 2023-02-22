@@ -1,6 +1,7 @@
 .search {
   display: flex;
   justify-content: center;
+  flex-direction: row;
   padding-top: 50px;
   margin-left: 225px;
 }
@@ -46,5 +47,8 @@ input:focus {
 }
 
 .search_button {
-  margin-left: 500px
+  background-color: var(--tertiary);
+  color: var(--primary);
+  border: white 3px solid;
+  margin-left: 15px
 }
