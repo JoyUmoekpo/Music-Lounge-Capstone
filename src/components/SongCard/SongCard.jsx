@@ -1,8 +1,15 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 
 import styles from "./SongCard.module.css";
 
 const SongCard = ({song}) => {
+	const navigate = useNavigate();
+
+	const handleClick = () => {
+		navigate('/favorites');
+	}
+
 	return (
 		<div className={styles.card}>
 			<div>
@@ -16,7 +23,7 @@ const SongCard = ({song}) => {
 				<h3 className={styles.song_text}>{song.title_short}</h3>
 				<h3 className={styles.song_text}>{song.artist.name}</h3>
 			</div>
-			<button className={styles.song_button}>Favorite Song</button>
+			<button className={styles.song_button} onClick={handleClick}>Favorite Song</button>
 		</div>
 	);
 };

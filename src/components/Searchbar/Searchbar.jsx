@@ -20,7 +20,7 @@ const SearchBar = () => {
 	};
 
 	const songDisplay = songs.map((song) => {
-		return <SongCard song={song} />;
+		return <SongCard song={song} key={song.id} />;
 	});
 
 	return (
