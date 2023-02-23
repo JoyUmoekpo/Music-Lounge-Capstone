@@ -1,10 +1,16 @@
-const axios = require('axios');
+const { PlaylistSongs } = require("../models/playlists_songs");
+
 
 module.exports = {
-  favorite: async (req, res) => {
-      const {song_id, userId} = req.body;
-      
-      console.log(req.body);
-      res.send(req.body);
-  }
-}
+	favorite: async (req, res) => {
+		try {
+			const { song_id, userId } = req.body;
+			await PlaylistSongs.create({ song_id, userId });
+			res.sendStatus(200);
+			console.log(req.body);
+			res.send(req.body);
+		} catch (error) {
+			console.log(error.message);
+		}
+	},
+};

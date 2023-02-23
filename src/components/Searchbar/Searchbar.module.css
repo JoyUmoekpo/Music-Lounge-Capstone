@@ -22,6 +22,9 @@
   border-radius: 20px 0 0 20px;
   padding: 10px;
 }
+.search_button {
+  width: 75px; 
+}
 
 .songs_container {
   /* border: 1px solid green; */
@@ -32,6 +35,7 @@
   flex-wrap: wrap;
   width: 60%;
   margin-left: 30%;
+  padding-top: 15px;
   padding-bottom: 75px;
   gap: 20px;
 }

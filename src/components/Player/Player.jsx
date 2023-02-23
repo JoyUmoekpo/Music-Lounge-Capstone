@@ -14,10 +14,6 @@ const Player = () => {
 						<BiPauseCircle size={50} />
 					</div>
 					<div>Song information</div>
-					<div id="player"></div>
-
-
-					
 				</div>
 			</div>
 		</Fragment>
