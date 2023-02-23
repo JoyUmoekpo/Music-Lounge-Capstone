@@ -32,7 +32,6 @@ const Auth = () => {
                 authCtx.login(res.data.token, res.data.exp, res.data.userId, res.data.username)
             })
             .catch(err => {
-                alert('Notification: There was an error with your request.')
                 setMessage(err.response.data)
                 setDisplay('block')
                 setPassword('')

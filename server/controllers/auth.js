@@ -23,7 +23,7 @@ module.exports = {
 			const { username, password } = req.body;
 			let foundUser = await User.findOne({ where: { username } });
 			if (foundUser) {
-				res.status(400).send("Unable to create user");
+				res.status(400).send("This user already exists. Please try again with the correct credentials.");
 			} else {
 				const salt = bcrypt.genSaltSync(10);
 				const hash = bcrypt.hashSync(password, salt);
@@ -42,7 +42,7 @@ module.exports = {
 				})
 			}
 		} catch (error) {
-			console.log("Registration Error");
+			console.log("There was a problem with your registration. Please try again.");
 			console.log(error);
 			res.sendStatus(400);
 		}
@@ -71,13 +71,13 @@ module.exports = {
 						exp,
 					});
 				} else {
-					res.status(400).send("Login Failure");
+					res.status(400).send("There was a problem with your login. Please try again.");
 				}
 			} else {
-				res.status(400).send("Login Failure");
+				res.status(400).send("There was a problem with your login. Please try again.");
 			}
 		} catch (error) {
-			console.log("Registration Error");
+			console.log("There was a problem with your registration. Please try again.");
 			console.log(error);
 			res.sendStatus(400);
 		}
