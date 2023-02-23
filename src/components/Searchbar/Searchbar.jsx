@@ -15,6 +15,7 @@ const SearchBar = () => {
 		axios.get(`${url}/search/${search}`).then((res) => {
 			console.log(res.data.data);
 			setSongs(res.data.data);
+			setSearch("")
 		});
 	};
 
