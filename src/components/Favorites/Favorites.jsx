@@ -10,14 +10,14 @@ const Favorites = () => {
   const { search } = useParams();
   const [songs, setSongs] = useState([]);
 
-  const url = "http://localhost:4040";
+  // const url = "http://localhost:4040";
 
-  useEffect(() => {
-    axios.get(`${url}/search/${search}`).then((res) => {
-      console.log(res.data.data);
-      setSongs(res.data.data);
-    });
-  }, [search]);
+  // useEffect(() => {
+  //   axios.get(`${url}/search/${search}`).then((res) => {
+  //     console.log(res.data.data);
+  //     setSongs(res.data.data);
+  //   });
+  // }, [search]);
 
   return (
     <Fragment>

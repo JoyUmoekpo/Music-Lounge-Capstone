@@ -29,7 +29,9 @@ const App = () => {
         <Route path='/auth' element={!authCtx.token ? <Auth/> : <Navigate to='/'/>}/>
         <Route path='/profile' element={authCtx.token ?<Profile/> : <Navigate to='/auth'/>}/>
         <Route path='/playlist' element={authCtx.token ? <Playlist />: <Navigate to='/auth' />}/>
+
         <Route path='/favorites' element={authCtx.token ? <Favorites />: <Navigate to='/auth' />}/>
+        
         <Route path='/player' element={authCtx.token ? <Player />: <Navigate to='/auth' />}/>
         <Route path='/recommendations' element={authCtx.token ? <Recommendations />: <Navigate to='/auth' />}/>
         <Route path='*' element={<Navigate to='/'/>}/>

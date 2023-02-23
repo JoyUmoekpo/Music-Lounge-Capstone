@@ -9,6 +9,9 @@ const { sequelize } = require("./util/database");
 const { register, login } = require("./controllers/auth");
 const { getAllPlaylists, getCurrentUserPlaylists, addPlaylist, deletePlaylist} = require("./controllers/playlists");
 const { search } = require("./controllers/search");
+const { favorite } = require("./controllers/favorite");
+
+
 const { isAuthenticated } = require("./middleware/isAuthenticated");
 const { User } = require("./models/user");
 const { Playlist } = require("./models/playlist");
@@ -28,6 +31,7 @@ app.get("/user_playlists/:userId", getCurrentUserPlaylists);
 app.post("/playlists", isAuthenticated, addPlaylist);
 app.delete("/playlists/:id", isAuthenticated, deletePlaylist);
 app.get("/search/:search_item", search);
+app.post("/favorite", favorite);
 
 sequelize
 	.sync()

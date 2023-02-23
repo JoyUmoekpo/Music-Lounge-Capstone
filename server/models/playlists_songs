@@ -9,5 +9,6 @@ PlaylistSongs : sequelize.define('playlist_songs', {
     allowNull: false,
     primaryKey: true,
   },
+  song_id: DataTypes.INTEGER,
 })
 }
