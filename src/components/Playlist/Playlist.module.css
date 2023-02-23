@@ -2,15 +2,18 @@
   text-align: center;
   margin-top: 25px;
   margin-left: 250px;
-  font-size: 50px;
+  font-size: 35px;
 }
 
 .playlist_button {
   background-color: var(--gray);
   color: #fff;
   text-align: center;
+  width: 175px;
+  font-size: 15px;
   margin-top: 25px;
   margin-left: 625px;
+  padding: 10px;
 }
 
 .playlists_container {

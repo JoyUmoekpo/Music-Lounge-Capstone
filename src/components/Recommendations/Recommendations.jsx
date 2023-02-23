@@ -1,32 +1,32 @@
-import React, { Fragment, useEffect, useState } from "react";
+// import React, { Fragment, useEffect, useState } from "react";
 import styles from "./Recommendations.module.css";
 
 const Recommendations = () => {
-  const [endPoint, setEndpoint] = useState("");
-  const [container, setContainer] = useState(null);
-  const [finalPoint, setFinalPoint] = useState("");
+  // const [endPoint, setEndpoint] = useState("");
+  // const [container, setContainer] = useState(null);
+  // const [finalPoint, setFinalPoint] = useState("");
 
-  useEffect(() => {
-    fetchData();
-  }, [finalPoint]);
+  // useEffect(() => {
+  //   fetchData();
+  // }, [finalPoint]);
 
-  const fetchData = async () => {
+  // const fetchData = async () => {
 
-  };
+  // };
 
-  const onChangeHandler = (e) => {
-    setEndpoint(e.target.value);
-  };
+  // const onChangeHandler = (e) => {
+  //   setEndpoint(e.target.value);
+  // };
 
-  const submitHandler = (e) => {
-    e.preventDefault();
-    setFinalPoint(endPoint);
-  };
+  // const submitHandler = (e) => {
+  //   e.preventDefault();
+  //   setFinalPoint(endPoint);
+  // };
 
   return (
     <div className={styles.rec_container}>
       <div className={styles.title}>Recommendations</div>
-      <form onSubmit={submitHandler}>
+      {/* <form onSubmit={submitHandler}>
         <input type="text" value={endPoint} onChange={onChangeHandler} />
         <button type="submit">Submit</button>
       </form>
@@ -41,7 +41,7 @@ const Recommendations = () => {
             <p>{item.recommended_song.full_title}</p>
           </div>
         );
-      })}
+      })} */}
     </div>
   );
 };

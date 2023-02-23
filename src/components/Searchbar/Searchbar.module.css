@@ -24,12 +24,15 @@
 }
 
 .songs_container {
+  /* border: 1px solid green; */
+  overflow: auto;
   display: flex;
+  justify-content: center;
   flex-direction: row;
-  overflow: scroll hidden;
-  width: 70%;
-  height: 235px;
-  margin-left: 25%;
+  flex-wrap: wrap;
+  width: 60%;
+  margin-left: 30%;
+  padding-bottom: 75px;
   gap: 20px;
 }
 
@@ -49,6 +52,6 @@ input:focus {
 .search_button {
   background-color: var(--tertiary);
   color: var(--primary);
-  border: white 3px solid;
+  border: none;
   margin-left: 15px
 }

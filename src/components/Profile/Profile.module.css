@@ -2,22 +2,23 @@
   text-align: center;
   margin-top: 25px;
   margin-left: 250px;
-  font-size: 50px;
+  font-size: 35px;
 }
 
 .profile_button_container {
   display: flex;
-  justify-content: space-around;  
+  justify-content: center;  
   align-items: center;
-  margin-top: 50px;  
+  margin-top: 25px;  
   margin-left: 225px;
+  gap: 15px;
 }
 
 .profile_button {
   background-color: var(--tertiary);
   color: var(--primary);
-  font-size: 20px;
   border: none;
-  border-radius: 5%;
-  padding: 20px;
+  width: 175px;
+  font-size: 15px;
+  padding: 10px;
 }

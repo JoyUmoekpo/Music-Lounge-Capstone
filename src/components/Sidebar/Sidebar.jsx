@@ -7,11 +7,12 @@ import styles from "./Sidebar.module.css";
 const Sidebar = () => {
 	const authCtx = useContext(AuthContext);
 
-	const styleActiveLink = ({ isActive }) => {
-		return {
-			backgroundColor: isActive ? "#000" : "",
-		};
-	};
+	// const styleActiveLink = ({ isActive }) => {
+	// 	return {
+	// 		backgroundColor: isActive ? "#000" : "",
+	// 	};
+	// };
+	// style={styleActiveLink}
 
 	return (
 		<div className={styles.sidebar}>
@@ -19,28 +20,28 @@ const Sidebar = () => {
 				{authCtx.token ? (
 					<ul className={styles.sidebar_contents}>
 						<li className={styles.sidebar_links}>
-							<NavLink style={styleActiveLink} to="/profile">
+							<NavLink to="/profile">
 								<button className={styles.sidebar_buttons}>Profile</button>
 							</NavLink>
 						</li>
 						<li className={styles.sidebar_links}>
-							<NavLink style={styleActiveLink} to="/playlist">
+							<NavLink to="/playlist">
 								<button className={styles.sidebar_buttons}>Playlist</button>
 							</NavLink>
 						</li>
 						<li className={styles.sidebar_links}>
-							<NavLink style={styleActiveLink} to="/favorites">
+							<NavLink to="/favorites">
 								<button className={styles.sidebar_buttons}>Favorites</button>
 							</NavLink>
 						</li>
 						<li className={styles.sidebar_links}>
-							<NavLink style={styleActiveLink} to="/player">
+							<NavLink to="/player">
 								<button className={styles.sidebar_buttons}>Player</button>
 							</NavLink>
 						</li>
 						<li className={styles.sidebar_links}>
-							<NavLink style={styleActiveLink} to="/recommendations">
-								<button className={styles.sidebar_buttons}>Song Recommendations</button>
+							<NavLink to="/recommendations">
+								<button className={styles.sidebar_buttons}> Recommendations</button>
 							</NavLink>
 						</li>
 					</ul>

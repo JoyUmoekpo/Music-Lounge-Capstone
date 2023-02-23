@@ -39,7 +39,7 @@ const SearchBar = () => {
 				</button>
 			</div>
 			<div className={styles.songs_container}>
-				<div> {songs && songDisplay}</div>
+				{songs && songDisplay}
 			</div>
 
 		</div>

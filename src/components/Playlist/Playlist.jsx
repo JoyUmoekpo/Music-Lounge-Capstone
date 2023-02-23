@@ -7,6 +7,7 @@ import AuthContext from "../../store/authContext";
 import styles from "./Playlist.module.css";
 
 const Playlist = () => {
+	const authCtx = useContext(AuthContext);
 	const { token, userId } = useContext(AuthContext);
 	const navigate = useNavigate();
 
@@ -34,7 +35,7 @@ const Playlist = () => {
 
 	return (
 		<Fragment>
-			<div className={styles.title}>[User's] Playlists</div>
+			<div className={styles.title}>{authCtx.username}'s Playlists</div>
 			<button className={styles.playlist_button}>Create a playlist</button>
 			<div className={styles.playlists_container}>
 			</div>

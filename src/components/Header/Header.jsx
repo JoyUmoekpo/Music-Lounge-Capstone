@@ -1,5 +1,4 @@
-import React from "react";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import AuthContext from "../../store/authContext";
 
@@ -23,9 +22,6 @@ const Header = () => {
 			<nav>
 				{authCtx.token ? (
 					<ul className={styles.main_nav}>
-						<li>
-							<div>{authCtx.username}</div>
-						</li>
 						<li>
 							<button className={styles.logout_btn} onClick={() => authCtx.logout()}>
 								Logout
