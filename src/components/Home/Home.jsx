@@ -15,7 +15,9 @@ const Home = () => {
 		<div
 			style={{
 				backgroundImage: `url(${background})`,
-				height: "90vh",
+				objectFit: 'contain',
+				height: "85vh",
+				width: "100vw"
 			}}>
 			<div className={styles.home_text}>
 				<main className={styles.home_text_background}>
@@ -28,7 +30,7 @@ const Home = () => {
 					App Description
 				</summary>
 			</div>
-		</div>) : (<Profile />)};
+		</div>) : (<Profile />)}
 		</Fragment>
 	);
 };
