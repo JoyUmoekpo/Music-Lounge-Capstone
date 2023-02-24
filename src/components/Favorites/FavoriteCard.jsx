@@ -9,15 +9,31 @@ const FavoriteCard = ({ song }) => {
 	console.log(song);
 
 	useEffect(() => {
+		getAllFavorites()
+	}, []);
+
+
+	const getAllFavorites = () => {
 		axios
-			.get(baseUrl + "/track/" + song.song_id)
+			.get(baseUrl + "/favorite/" + song.song_id)
 			.then((res) => {
 				setfavSongs(res.data);
 			})
 			.catch((err) => {
-				console.log("Error in getSongInfo");
+				console.log("Error in getAllFavorites");
 			});
-	}, [song.song_id]);
+	}
+
+	const deletePost = id => {
+		axios.delete(baseUrl + "/favorite/" +song.id)
+				.then(() => {
+					console.log("Song deleted");
+				})
+				.catch(err => {
+						console.log(err)
+				})
+}
+
 
 	return (
 		<div>
@@ -25,6 +41,7 @@ const FavoriteCard = ({ song }) => {
 				<div>{song.id}</div>
 				<div>{favSongs.id}</div>
 				<div>{favSongs.title}</div>
+				<button onClick={() => deletePost()}>Delete</button>
 			</div>
 		</div>
 	);
