@@ -8,7 +8,6 @@ module.exports = {
 			await PlaylistSongs.create({ song_id, userId });
 			res.sendStatus(200);
 			console.log(req.body);
-			res.send(req.body);
 		} catch (error) {
 			console.log(error.message);
 		}

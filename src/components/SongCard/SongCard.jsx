@@ -1,5 +1,7 @@
 import React from "react";
+import ReactPlayer from 'react-player'
 import axios from "axios";
+
 
 import styles from "./SongCard.module.css";
 
@@ -31,6 +33,17 @@ const SongCard = ({song}) => {
 				<h3 className={styles.song_text}>{song.artist.name}</h3>
 			</div>
 			<button className={styles.song_button} onClick={() => handleClick(song.id)}>Favorite Song</button>
+
+			<ReactPlayer
+        url={song.preview}
+        width="200px"
+        height="25px"
+        playing={false}
+        controls={true}
+				volume={0.3}
+      />
+
+			{/* <button className={styles.song_button} >Preview</button> */}
 		</div>
 	);
 };
