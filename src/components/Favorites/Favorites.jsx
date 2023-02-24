@@ -9,7 +9,7 @@ const Favorites = () => {
 	const authCtx = useContext(AuthContext);
 	const [favorites, setFavorites] = useState([]);
 
-	const baseUrl = "http://localhost:4040";
+	const baseUrl = "http://localhost:4040"
 
 	const getAllFavorites = () => {
 		axios

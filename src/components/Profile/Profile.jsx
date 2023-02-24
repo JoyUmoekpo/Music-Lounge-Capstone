@@ -21,7 +21,6 @@ const Profile = () => {
 					<button className={styles.profile_button}>See your favorites</button>
 				</NavLink>
 			</div>
-
 			<Searchbar />
 		</Fragment>
 	);

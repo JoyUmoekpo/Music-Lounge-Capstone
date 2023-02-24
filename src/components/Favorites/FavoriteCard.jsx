@@ -17,7 +17,7 @@ const FavoriteCard = ({ song }) => {
 			.catch((err) => {
 				console.log("Error in getSongInfo");
 			});
-	}, []);
+	}, [song.song_id]);
 
 	return (
 		<div>

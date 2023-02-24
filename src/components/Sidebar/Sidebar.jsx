@@ -1,4 +1,4 @@
- import React from "react";
+import React from "react";
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import AuthContext from "../../store/authContext";
@@ -41,7 +41,9 @@ const Sidebar = () => {
 						</li>
 						<li className={styles.sidebar_links}>
 							<NavLink to="/recommendations">
-								<button className={styles.sidebar_buttons}> Recommendations</button>
+								<button className={styles.sidebar_buttons}>
+									Recommendations
+								</button>
 							</NavLink>
 						</li>
 					</ul>

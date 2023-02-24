@@ -15,14 +15,19 @@ const Header = () => {
 
 	return (
 		<header className={`${styles.header} ${styles.row}`}>
-			<div className={styles.row}>
-			{/* <img src={logo} alt='dm-logo' className='logo'/> */}
-			</div>
+			<div className={styles.row}></div>
 			<nav>
 				{authCtx.token ? (
 					<ul className={styles.main_nav}>
 						<li>
-							<button className={styles.logout_btn} onClick={() => authCtx.logout()}>
+							<NavLink to="/profile">
+								<button className={styles.header_btn}>Profile</button>
+							</NavLink>
+						</li>
+						<li>
+							<button
+								className={styles.header_btn}
+								onClick={() => authCtx.logout()}>
 								Logout
 							</button>
 						</li>
