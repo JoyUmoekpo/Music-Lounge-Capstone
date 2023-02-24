@@ -9,7 +9,7 @@ const SongCard = ({song}) => {
 	const url = "http://localhost:4040";
 	
 	const handleClick = (song_id) => {
-		console.log(localStorage.getItem('userId'));
+		// console.log(localStorage.getItem('userId'));
 	axios.post(`${url}/favorite`, {song_id, user_id: localStorage.getItem('userId')})
 	.then((res) => {
 		console.log(res.data);
@@ -42,8 +42,6 @@ const SongCard = ({song}) => {
         controls={true}
 				volume={0.3}
       />
-
-			{/* <button className={styles.song_button} >Preview</button> */}
 		</div>
 	);
 };

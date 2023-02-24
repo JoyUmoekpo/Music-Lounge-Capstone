@@ -1,36 +1,42 @@
 import React, { Fragment, useContext, useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import FavoriteCard from "./FavoriteCard";
 import axios from "axios";
 import AuthContext from "../../store/authContext";
 
 import styles from "./Favorites.module.css";
 
 const Favorites = () => {
-  const authCtx = useContext(AuthContext);
-  const { search } = useParams();
-  const [songs, setSongs] = useState([]);
+	const authCtx = useContext(AuthContext);
+	const [favorites, setFavorites] = useState([]);
 
-  // const url = "http://localhost:4040";
+	const baseUrl = "http://localhost:4040";
 
-  // useEffect(() => {
-  //   axios.get(`${url}/search/${search}`).then((res) => {
-  //     console.log(res.data.data);
-  //     setSongs(res.data.data);
-  //   });
-  // }, [search]);
+	const getAllFavorites = () => {
+		axios
+			.get(baseUrl + "/favorite")
+			.then((res) => {
+				setFavorites(res.data);
+				console.log(res.data);
+			})
+			.catch((err) => {
+				console.log("Error in getAllFavorites");
+			});
+	};
 
-  return (
-    <Fragment>
-      <div className={styles.title}>{authCtx.username}'s Favorite Songs</div>
-      <div className={styles.favorites_container}>
-        {songs.map((song) => (
-          <div className={styles.favorite} key={song.id}>
-            {song.title_short} | {song.artist.name} | {song.album.title}
-          </div>
-        ))}
-      </div>
-    </Fragment>
-  );
+	useEffect(() => {
+		getAllFavorites();
+	}, []);
+
+	const mappedFavorites = favorites.map((favorite) => {
+		return <FavoriteCard song={favorite} />;
+	});
+
+	return (
+		<Fragment>
+			<div className={styles.title}>{authCtx.username}'s Favorite Songs</div>
+			{mappedFavorites}
+		</Fragment>
+	);
 };
 
 export default Favorites;

@@ -7,31 +7,26 @@ const cors = require("cors");
 
 const { sequelize } = require("./util/database");
 const { register, login } = require("./controllers/auth");
-const { getAllPlaylists, getCurrentUserPlaylists, addPlaylist, deletePlaylist} = require("./controllers/playlists");
-const { search } = require("./controllers/search");
-const { favorite } = require("./controllers/favorite");
+const { search, getOneSong } = require("./controllers/search");
+const { addFavorite, getFavorites } = require("./controllers/favorites");
 
-
-const { isAuthenticated } = require("./middleware/isAuthenticated");
 const { User } = require("./models/user");
-const { Playlist } = require("./models/playlist");
+const { Favorites } = require("./models/favorites");
 
 const app = express();
 
 app.use(express.json());
 app.use(cors());
 
-User.hasMany(Playlist);
-Playlist.belongsTo(User);
+User.hasMany(Favorites);
+Favorites.belongsTo(User)
 
 app.post("/register", register);
 app.post("/login", login);
-app.get("/playlists", getAllPlaylists);
-app.get("/user_playlists/:userId", getCurrentUserPlaylists);
-app.post("/playlists", isAuthenticated, addPlaylist);
-app.delete("/playlists/:id", isAuthenticated, deletePlaylist);
 app.get("/search/:search_item", search);
-app.post("/favorite", favorite);
+app.post("/favorite", addFavorite);
+app.get("/favorite", getFavorites);
+app.get("/track/:id", getOneSong)
 
 sequelize
 	.sync()
