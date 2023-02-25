@@ -17,7 +17,7 @@ const FavoriteCard = ({ song, deleteFavorites }) => {
 		.catch((err) => {
 			console.log("Error in getAllFavorites");
 		});
-	}, []);
+	}, [song.song_id]);
 
 	return (
 		<div>

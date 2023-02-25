@@ -7,13 +7,6 @@ import styles from "./Sidebar.module.css";
 const Sidebar = () => {
 	const authCtx = useContext(AuthContext);
 
-	// const styleActiveLink = ({ isActive }) => {
-	// 	return {
-	// 		backgroundColor: isActive ? "#000" : "",
-	// 	};
-	// };
-	// style={styleActiveLink}
-
 	return (
 		<div className={styles.sidebar}>
 			<nav>
