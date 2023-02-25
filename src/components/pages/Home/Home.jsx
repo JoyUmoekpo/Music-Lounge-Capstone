@@ -3,7 +3,7 @@ import { useContext } from "react";
 import AuthContext from "../../../store/authContext";
 import Profile from "../Profile/Profile"
 
-import background from "../../assets/headphones.jpg";
+import background from "../../../assets/headphones.jpg";
 import styles from "./Home.module.css";
 
 const Home = () => {

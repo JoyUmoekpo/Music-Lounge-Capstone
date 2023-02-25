@@ -3,16 +3,16 @@ import "./App.css";
 import { useContext } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 
-import Auth from "./components/Auth/Auth";
-import Home from "./components/Home/Home";
-import Header from "./components/Header/Header";
-import Sidebar from "./components/Sidebar/Sidebar";
-import Footer from "./components/Footer/Footer";
-import Profile from "./components/Profile/Profile";
-import Playlist from "./components/Playlist/Playlist";
-import Favorites from "./components/Favorites/Favorites";
-import Player from "./components/Player/Player";
-import Recommendations from "./components/Recommendations/Recommendations";
+import Auth from "./components/pages/Auth/Auth";
+import Home from "./components/pages/Home/Home";
+import Header from "./components/UI/Header/Header";
+import Sidebar from "./components/UI/Sidebar/Sidebar";
+import Footer from "./components/UI/Footer/Footer";
+import Profile from "./components/pages/Profile/Profile";
+import Playlist from "./components/pages/Playlist/Playlist";
+import Favorites from "./components/pages/Favorites/Favorites";
+import Player from "./components/pages/Player/Player";
+import Recommendations from "./components/pages/Recommendations/Recommendations";
 
 import AuthContext from "./store/authContext";
 

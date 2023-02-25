@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import SongCard from "../SongCard/SongCard";
-import { BiSearch } from "react-icons/bi";
+import { BiSearch } from "react-icons/bi"; 
 import axios from "axios";
+
+import SongCard from "../../UI/SongCard/SongCard";
 
 import styles from "./Searchbar.module.css";
 
