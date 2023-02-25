@@ -7,10 +7,12 @@
 .header {
 	background-color: var(--primary);
 	color: #f0f0f0;
-	position: sticky;
+	position: fixed;
   top: 0;
 	height: 50px;
-	padding: 0 10px;
+	width: 1120px;
+	padding: 0 20px;
+	z-index: 1;
 }
 
 .logo {
@@ -34,7 +36,7 @@
 	background: transparent;
 	text-decoration: none;
 	font-size: 1rem;
-	margin: 0;
+	margin-right: 10px;
 	padding: 0;
 	border: none;
 	transition: .3s;

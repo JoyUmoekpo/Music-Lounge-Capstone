@@ -1,7 +1,8 @@
 .sidebar {
   background: var(--secondary);
   position: fixed;
-  top: 50px;
+  z-index: 0;
+  top: 0;
   left: 0;
   width: 200px;
   height: 100%;
