@@ -1,8 +1,9 @@
 import React, { Fragment, useContext } from "react";
 import { NavLink } from "react-router-dom";
-import AuthContext from "../../store/authContext";
+import AuthContext from "../../../store/authContext";
 
-import Searchbar from "../Searchbar/Searchbar";
+import SearchBar from "../../UI/Searchbar/Searchbar";
+
 
 import styles from "./Profile.module.css";
 
@@ -21,7 +22,7 @@ const Profile = () => {
 					<button className={styles.profile_button}>See your favorites</button>
 				</NavLink>
 			</div>
-			<Searchbar />
+			<SearchBar />
 		</Fragment>
 	);
 };

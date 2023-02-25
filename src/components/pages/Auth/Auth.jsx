@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
 import axios from "axios";
 
-import AuthContext from "../../store/authContext";
+import AuthContext from "../../../store/authContext";
 
 import styles from "./Auth.module.css";
 
