@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { useContext } from "react";
-import AuthContext from "../../store/authContext";
+import AuthContext from "../../../store/authContext";
 import Profile from "../Profile/Profile"
 
 import background from "../../assets/headphones.jpg";

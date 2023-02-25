@@ -1,7 +1,7 @@
 import React, { Fragment, useContext, useState, useEffect } from "react";
 import FavoriteCard from "./FavoriteCard";
 import axios from "axios";
-import AuthContext from "../../store/authContext";
+import AuthContext from "../../../store/authContext";
 
 import styles from "./Favorites.module.css";
 

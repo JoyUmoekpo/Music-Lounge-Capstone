@@ -2,7 +2,7 @@ import React, { Fragment, useState, useContext } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-import AuthContext from "../../store/authContext";
+import AuthContext from "../../../store/authContext";
 
 import styles from "./Playlist.module.css";
 

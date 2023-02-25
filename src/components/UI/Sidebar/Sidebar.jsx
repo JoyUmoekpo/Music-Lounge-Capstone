@@ -1,7 +1,7 @@
 import React from "react";
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import AuthContext from "../../store/authContext";
+import AuthContext from "../../../store/authContext";
 import styles from "./Sidebar.module.css";
 
 const Sidebar = () => {
