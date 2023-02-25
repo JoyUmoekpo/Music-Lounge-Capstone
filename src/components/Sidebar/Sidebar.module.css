@@ -23,7 +23,7 @@
 
 .sidebar_buttons {
   background-color: var(--gray);
-  color: #fff;
+  color: var(--white);
   border: none;
   width: 150px;
   font-size: 13px;
@@ -31,5 +31,5 @@
 }
 
 .sidebar_buttons:focus {
-	background-color: #000;
+	background-color: var(--black);
 }

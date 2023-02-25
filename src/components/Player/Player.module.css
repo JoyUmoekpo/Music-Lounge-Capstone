@@ -1,8 +1,8 @@
 .title {
   text-align: center;
+  font-size: 35px;
   margin-top: 25px;
   margin-left: 250px;
-  font-size: 35px;
 }
 
 .player_container {
@@ -10,8 +10,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 75px;
   width: 700px;
+  height: 75px;
   margin-top: 25px;
   margin-left: 350px;
 }

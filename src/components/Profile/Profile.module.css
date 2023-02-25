@@ -1,8 +1,8 @@
 .title {
   text-align: center;
+  font-size: 35px;
   margin-top: 25px;
   margin-left: 250px;
-  font-size: 35px;
 }
 
 .profile_button_container {
@@ -17,8 +17,8 @@
 .profile_button {
   background-color: var(--tertiary);
   color: var(--primary);
-  border: none;
   width: 175px;
   font-size: 15px;
   padding: 10px;
+  border: none;
 }

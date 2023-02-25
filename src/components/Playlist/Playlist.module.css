@@ -1,13 +1,13 @@
 .title {
   text-align: center;
+  font-size: 35px;
   margin-top: 25px;
   margin-left: 250px;
-  font-size: 35px;
 }
 
 .playlist_button {
   background-color: var(--gray);
-  color: #fff;
+  color: var(--white);
   text-align: center;
   width: 175px;
   font-size: 15px;
@@ -21,11 +21,10 @@
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 25px;
-  margin-left: 425px;
   width: 550px;
   height: 300px;
-  /* padding: 250px; */
+  margin-top: 25px;
+  margin-left: 425px;
 }
 
 .playlists {
@@ -33,8 +32,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  margin-right: 50px;
   width: 125px;
   height: 125px;
+  text-align: center;
+  margin-right: 50px;
 }

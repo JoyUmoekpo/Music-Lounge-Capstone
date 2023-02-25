@@ -30,6 +30,8 @@ time, mark, audio, video {
   --tertiary: #1CAC78;
   --gray: #696969;
 	--favorites: #C5C5C5;
+	--white: #fff;
+	--black: #000
 }
 
 *, h1, h2, h3, a, p, button {
@@ -52,17 +54,17 @@ h3 {
 }
 
 h4 {
+	color: var(--tertiary);
 	font-size: 1.25;
 	font-style: italic;
-	color: var(--tertiary);
 	padding: 10px 0;	
 }
 
 a {
 	color: #f0f0f0;
 	text-decoration: none;
-	transition: .3s;
 	font-size: 1rem;
+	transition: .3s;
 }
 
 a:hover {
@@ -70,10 +72,10 @@ a:hover {
 }
 
 main {
-	padding-top: 25px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding-top: 25px;
 }
 
 button {
