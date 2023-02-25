@@ -19,22 +19,10 @@ const FavoriteCard = ({ song, deleteFavorites }) => {
 		});
 	}, []);
 
-	// const getAllFavorites = () => {
-	// 	axios
-	// 		.get(baseUrl + "/favorite/" + song.song_id)
-	// 		.then((res) => {
-	// 			setfavSongs(res.data);
-	// 		})
-	// 		.catch((err) => {
-	// 			console.log("Error in getAllFavorites");
-	// 		});
-	// }
-
-
 	return (
 		<div>
 			<div className={styles.favorite}>
-				{song.id} |{favSongs.id} | {favSongs.title} | {song.song_id}
+				{song.id} | {favSongs.id} | {favSongs.title} | {song.song_id}
 				<button onClick={() => deleteFavorites(song.id)}>Delete</button>
 			</div>
 		</div>
