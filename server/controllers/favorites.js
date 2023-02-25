@@ -12,7 +12,6 @@ module.exports = {
 	},
 	getFavorites: async (req, res) => {
 		try {			
-			// const { userId } = req.user;
 			const favorites = await Favorites.findAll();
 			res.status(200).send(favorites);
 		} catch (error) {
