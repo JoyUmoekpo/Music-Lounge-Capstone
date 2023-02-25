@@ -27,9 +27,24 @@ const Favorites = () => {
 		getAllFavorites();
 	}, []);
 
+	
+	const deleteFavoritesHandler = (id) => {
+		axios
+			.delete(baseUrl + "/favorite/" + id)
+			.then(() => {
+				console.log("Song deleted");
+				getAllFavorites();
+			})
+			.catch((err) => {
+				console.log(err);
+			});
+	};
+
 	const mappedFavorites = favorites.map((favorite) => {
-		return <FavoriteCard song={favorite} />;
+		return <FavoriteCard song={favorite} deleteFavorites={deleteFavoritesHandler}/>;
 	});
+
+	
 
 	return (
 		<Fragment>
