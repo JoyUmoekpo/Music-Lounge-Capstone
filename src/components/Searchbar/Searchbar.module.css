@@ -2,8 +2,8 @@
   display: flex;
   justify-content: center;
   flex-direction: row;
-  padding-top: 25px;
   margin-left: 225px;
+  padding-top: 25px;
 }
 
 .search_bar {
@@ -12,23 +12,21 @@
   width: 225px;
   font-size: 15px;
   font-weight: 500;
+  padding: 5px;
   border: none;
   border-radius: 0 20px 20px 0;
-  padding: 5px;
 }
 
 .search_icon {
   background-color: var(--secondary);
-  border-radius: 20px 0 0 20px;
   padding: 10px;
+  border-radius: 20px 0 0 20px;
 }
 .search_button {
   width: 75px; 
 }
 
 .songs_container {
-  /* border: 1px solid green; */
-  overflow: auto;
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -46,7 +44,7 @@
 }
 
 input[type="text"] {
-  color: white;
+  color: var(--white);
 }
 
 input:focus {
@@ -56,6 +54,6 @@ input:focus {
 .search_button {
   background-color: var(--tertiary);
   color: var(--primary);
+  margin-left: 15px;
   border: none;
-  margin-left: 15px
 }

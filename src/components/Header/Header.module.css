@@ -4,16 +4,13 @@
 	align-items: center;
 }
 
-
-/* header */
-
 .header {
 	background-color: var(--primary);
 	color: #f0f0f0;
-	height: 50px;
-	padding: 0 10px;
 	position: sticky;
   top: 0;
+	height: 50px;
+	padding: 0 10px;
 }
 
 .logo {
@@ -34,13 +31,13 @@
 
 .header_btn {
 	color: #f0f0f0;
-	text-decoration: none;
-	transition: .3s;
-	font-size: 1rem;
 	background: transparent;
-	border: none;
-	padding: 0;
+	text-decoration: none;
+	font-size: 1rem;
 	margin: 0;
+	padding: 0;
+	border: none;
+	transition: .3s;
 }
 
 .header_btn:hover {
