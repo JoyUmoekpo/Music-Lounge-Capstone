@@ -6,7 +6,7 @@ import styles from "./Playlist.module.css";
 
 const Playlist = () => {
 	const authCtx = useContext(AuthContext);
-
+//title char
 
 	return (
 		<Fragment>

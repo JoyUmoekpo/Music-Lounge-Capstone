@@ -12,7 +12,7 @@ import Profile from "./components/pages/Profile/Profile";
 import Playlist from "./components/pages/Playlist/Playlist";
 import Favorites from "./components/pages/Favorites/Favorites";
 import Player from "./components/pages/Player/Player";
-import Recommendations from "./components/pages/Recommendations/Recommendations";
+import News from "./components/pages/News/News";
 
 import AuthContext from "./store/authContext";
 
@@ -48,9 +48,9 @@ const App = () => {
 					element={authCtx.token ? <Player /> : <Navigate to="/auth" />}
 				/>
 				<Route
-					path="/recommendations"
+					path="/news"
 					element={
-						authCtx.token ? <Recommendations /> : <Navigate to="/auth" />
+						authCtx.token ? <News /> : <Navigate to="/auth" />
 					}
 				/>
 				<Route path="*" element={<Navigate to="/" />} />

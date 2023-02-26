@@ -33,9 +33,9 @@ const Sidebar = () => {
 							</NavLink>
 						</li>
 						<li className={styles.sidebar_links}>
-							<NavLink to="/recommendations">
+							<NavLink to="/news">
 								<button className={styles.sidebar_buttons}>
-									Recommendations
+									News
 								</button>
 							</NavLink>
 						</li>

@@ -22,8 +22,13 @@
   padding: 10px;
   border-radius: 20px 0 0 20px;
 }
+
 .search_button {
+  background-color: var(--tertiary);
+  color: var(--primary);
   width: 75px; 
+  margin-left: 15px;
+  border: none;
 }
 
 .songs_container {
@@ -49,11 +54,4 @@ input[type="text"] {
 
 input:focus {
   outline: none;
-}
-
-.search_button {
-  background-color: var(--tertiary);
-  color: var(--primary);
-  margin-left: 15px;
-  border: none;
 }
