@@ -1,7 +1,10 @@
+.profile_position {
+  margin: 100px
+}
+
 .title {
   text-align: center;
   font-size: 35px;
-  margin-top: 75px;
   margin-left: 250px;
 }
 
