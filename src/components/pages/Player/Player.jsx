@@ -6,7 +6,7 @@ import styles from "./Player.module.css";
 const Player = () => {
 	return (
 		<Fragment>
-			<div>
+			<div className={styles.player_position}>
 				<div className={styles.title}>Player</div>
 				<div className={styles.player_container}>
 					<div className={styles.player_icons}>

@@ -9,7 +9,7 @@ const Favorites = () => {
 	const authCtx = useContext(AuthContext);
 	const [favorites, setFavorites] = useState([]);
 
-	const baseUrl = "http://localhost:4040"
+	const baseUrl = "http://localhost:4040";
 
 	const getAllFavorites = () => {
 		axios
@@ -27,7 +27,6 @@ const Favorites = () => {
 		getAllFavorites();
 	}, []);
 
-	
 	const deleteFavoritesHandler = (id) => {
 		axios
 			.delete(baseUrl + "/favorite/" + id)
@@ -41,15 +40,17 @@ const Favorites = () => {
 	};
 
 	const mappedFavorites = favorites.map((favorite) => {
-		return <FavoriteCard song={favorite} deleteFavorites={deleteFavoritesHandler}/>;
+		return (
+			<FavoriteCard song={favorite} deleteFavorites={deleteFavoritesHandler} />
+		);
 	});
-
-	
 
 	return (
 		<Fragment>
-			<div className={styles.title}>{authCtx.username}'s Favorite Songs</div>
-			{mappedFavorites}
+			<div className={styles.favorites_position}>
+				<div className={styles.title}>{authCtx.username}'s Favorite Songs</div>
+				{mappedFavorites}
+			</div>
 		</Fragment>
 	);
 };

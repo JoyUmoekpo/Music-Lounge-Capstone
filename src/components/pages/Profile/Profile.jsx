@@ -4,7 +4,6 @@ import AuthContext from "../../../store/authContext";
 
 import SearchBar from "../../UI/Searchbar/Searchbar";
 
-
 import styles from "./Profile.module.css";
 
 const Profile = () => {
@@ -12,17 +11,23 @@ const Profile = () => {
 
 	return (
 		<Fragment>
-			<div className={styles.title}>{authCtx.username}'s Profile Page</div>
-			<div className={styles.profile_button_container}>
-				<button className={styles.profile_button}>Create a playlist</button>
-				<NavLink to="/playlist">
-					<button className={styles.profile_button}>See your playlists</button>
-				</NavLink>
-				<NavLink to="/favorites">
-					<button className={styles.profile_button}>See your favorites</button>
-				</NavLink>
+			<div className={styles.profile_position}>
+				<div className={styles.title}>{authCtx.username}'s Profile Page</div>
+				<div className={styles.profile_button_container}>
+					<button className={styles.profile_button}>Create a playlist</button>
+					<NavLink to="/playlist">
+						<button className={styles.profile_button}>
+							See your playlists
+						</button>
+					</NavLink>
+					<NavLink to="/favorites">
+						<button className={styles.profile_button}>
+							See your favorites
+						</button>
+					</NavLink>
+				</div>
+				<SearchBar />
 			</div>
-			<SearchBar />
 		</Fragment>
 	);
 };
