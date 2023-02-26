@@ -16,7 +16,7 @@ const Home = () => {
 			style={{
 				backgroundImage: `url(${background})`,
 				objectFit: 'contain',
-				height: "85vh",
+				height: "95vh",
 				width: "100vw"
 			}}>
 			<div className={styles.home_text}>
