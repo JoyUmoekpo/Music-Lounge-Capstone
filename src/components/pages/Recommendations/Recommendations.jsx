@@ -1,13 +1,51 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Recommendations.module.css";
 
-const Recommendations = () => {
+import axios from "axios";
+import NewsCard from "./NewsCard";
 
-  return (
-    <div className={styles.rec_position}>
-      <div className={styles.title}>Recommendations</div>
-    </div>
-  );
+const Recommendations = () => {
+	const [searchTerm, setSearchTerm] = useState("");
+	const [articles, setArticles] = useState([]);
+
+	const baseUrl = "http://localhost:4040";
+
+	const getMusicNews = () => {
+		axios
+			.get(baseUrl + "/everything/" + searchTerm)
+			.then((res) => {
+				console.log(res.data.articles);
+				setArticles(res.data.articles);
+			})
+			.catch((err) => {
+				console.log("Error in getMusicNews");
+			});
+	};
+
+	const mappedArticles = articles.map((article) => {
+		return <NewsCard articles={article} />;
+	});
+
+	return (
+		<div className={styles.rec_position}>
+			<div className={styles.title}>Recommendations</div>
+			<div className={styles.recommendations_search_container}>
+				<input
+					type="text"
+					value={searchTerm}
+					onChange={(e) => setSearchTerm(e.target.value)}
+					placeholder="Search for articles here"
+					className={styles.recommendations_search}
+				/>
+				<button
+					onClick={getMusicNews}
+					className={styles.recommendations_button}>
+					Search
+				</button>
+			</div>
+			<ul>{mappedArticles}</ul>
+		</div>
+	);
 };
 
 export default Recommendations;
