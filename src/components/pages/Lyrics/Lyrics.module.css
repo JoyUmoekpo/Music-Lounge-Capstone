@@ -1,4 +1,44 @@
-.player_position {
+.lyrics_position {
+  margin: 100px;
+}
+
+.title {
+  text-align: center;
+  font-size: 35px;
+  margin-left: 250px;
+}
+
+.lyric_form {
+  margin-top: 15px;
+  margin-left: 325px;
+}
+
+.lyric_input {
+  background-color: var(--secondary);
+  color: var(--gray);
+  width: 225px;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 5px;
+  border: none;
+  border-radius:20px;
+margin-right: 10px;
+}
+
+.lyric_button {
+  background-color: var(--tertiary);
+  color: var(--primary);
+  width: 75px; 
+  margin-left: 15px;
+  border: none;
+}
+
+
+
+
+
+
+/* .player_position {
   margin: 100px;
 }
 
@@ -22,3 +62,14 @@
 .player_icons {
   margin: 25px;
 }
+
+<div className={styles.player_position}>
+				<div className={styles.title}>Player</div>
+				<div className={styles.player_container}>
+					<div className={styles.player_icons}>
+						<BiPlayCircle size={50} />
+						<BiPauseCircle size={50} />
+					</div>
+					<div>Song information</div>
+				</div>
+			</div> */
