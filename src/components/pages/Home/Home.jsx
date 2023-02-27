@@ -21,13 +21,13 @@ const Home = () => {
 			}}>
 			<div className={styles.home_text}>
 				<main className={styles.home_text_background}>
-					Welcome to my React App
+					Welcome to Music Lounge
 				</main>
 			</div>
 
 			<div className={styles.home_text}>
 				<summary className={styles.home_text_background}>
-					App Description
+					A Music Hot Spot
 				</summary>
 			</div>
 		</div>) : (<Profile />)}
