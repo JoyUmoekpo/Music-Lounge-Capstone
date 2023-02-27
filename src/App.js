@@ -13,7 +13,7 @@ import Footer from "./components/UI/Footer/Footer";
 import Profile from "./components/pages/Profile/Profile";
 import Playlist from "./components/pages/Playlist/Playlist";
 import Favorites from "./components/pages/Favorites/Favorites";
-import Player from "./components/pages/Player/Player";
+import Lyrics from "./components/pages/Lyrics/Lyrics";
 import News from "./components/pages/News/News";
 import LoadingModal from "./components/UI/LoadingModal/LoadingModal";
 
@@ -49,8 +49,8 @@ const App = () => {
 				/>
 
 				<Route
-					path="/player"
-					element={authCtx.token ? <Player /> : <Navigate to="/auth" />}
+					path="/lyrics"
+					element={authCtx.token ? <Lyrics /> : <Navigate to="/auth" />}
 				/>
 				<Route
 					path="/news"
