@@ -36,9 +36,10 @@
 }
 
 .lyric_container {
-  width: 500px;
-  height: 500px;
-  margin-left: 300px;
+  width: 700px;
+  height: 10px;
+  margin-left: 275px;
+  margin-bottom: 10px;
 }
 
 .lyric_labels {
@@ -46,11 +47,11 @@
 }
 
 .lyric_info {
-  color: var(--secondary)
+  color: var(--tertiary)
 }
 
 .lyric_section {
-  margin-bottom: 15px;
-  display: flex;
-  flex-direction: column;
+  /* margin-bottom: 15px; */
+  /* display: flex;
+  flex-direction: column; */
 }
