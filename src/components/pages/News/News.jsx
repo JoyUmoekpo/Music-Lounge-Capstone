@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import styles from "./News.module.css";
+
 import axios from "axios";
 import NewsCard from "./NewsCard";
+import styles from "./News.module.css";
 
 const News = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -27,14 +28,14 @@ const News = () => {
 
   return (
     <div className={styles.news_position}>
-      <div className={styles.title}>Search for Music News</div>
+      <div className={styles.title}>Search for Artist News</div>
       <div className={styles.news_search_container}>
         <input
           type="text"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           placeholder="Search for articles here"
-          className={styles.news_search}
+          className={`${styles.news_search} ${styles.centered}`}
         />
         <button onClick={getMusicNews} className={styles.news_button}>
           Search
