@@ -36,7 +36,7 @@ const SearchBar = () => {
 					placeholder="Search for a song or artist"
 					className={styles.search_bar}
 				/>
-				<button className={styles.lyrics_button} onClick={submit}>
+				<button className={styles.search_button} onClick={submit}>
 					Submit
 				</button>
 			</div>

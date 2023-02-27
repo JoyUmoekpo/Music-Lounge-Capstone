@@ -16,60 +16,41 @@
 .lyric_input {
   background-color: var(--secondary);
   color: var(--gray);
+  text-align: center;
   width: 225px;
   font-size: 15px;
   font-weight: 500;
-  padding: 5px;
+  padding: 10px;
   border: none;
-  border-radius:20px;
-margin-right: 10px;
+  border-radius: 20px;
+  margin-right: 10px;
 }
 
 .lyric_button {
   background-color: var(--tertiary);
   color: var(--primary);
-  width: 75px; 
+  width: 75px;
   margin-left: 15px;
+  padding: 10px;
   border: none;
 }
 
-
-
-
-
-
-/* .player_position {
-  margin: 100px;
+.lyric_container {
+  width: 500px;
+  height: 500px;
+  margin-left: 300px;
 }
 
-.title {
-  text-align: center;
-  font-size: 35px;
-  margin-left: 250px;
+.lyric_labels {
+  color: var(--tertiary)
 }
 
-.player_container {
-  background-color: var(--secondary);
+.lyric_info {
+  color: var(--secondary)
+}
+
+.lyric_section {
+  margin-bottom: 15px;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 700px;
-  height: 75px;
-  margin-top: 25px;
-  margin-left: 250px;
+  flex-direction: column;
 }
-
-.player_icons {
-  margin: 25px;
-}
-
-<div className={styles.player_position}>
-				<div className={styles.title}>Player</div>
-				<div className={styles.player_container}>
-					<div className={styles.player_icons}>
-						<BiPlayCircle size={50} />
-						<BiPauseCircle size={50} />
-					</div>
-					<div>Song information</div>
-				</div>
-			</div> */
