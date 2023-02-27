@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+import ReactPlayer from "react-player";
 
 import { useDispatch } from "react-redux";
 import {
@@ -12,7 +13,7 @@ import styles from "./Favorites.module.css";
 const FavoriteCard = ({ song, deleteFavorites }) => {
 	const [favSongs, setfavSongs] = useState([]);
 	const [artist, setArtist] = useState({});
-	const [album, setAlbum] = useState({})
+	const [album, setAlbum] = useState({});
 	const dispatch = useDispatch();
 
 	const baseUrl = "http://localhost:4040";
@@ -45,20 +46,31 @@ const FavoriteCard = ({ song, deleteFavorites }) => {
 						/>
 					</span>
 					<span> | </span>
-					<span>{favSongs.title_short} </span>
+					<span> {favSongs.title_short} </span>
 					<span> | </span>
 					<span>{artist.name}</span>
 					<span> | </span>
-					{/* <span>{favSongs.id} </span>		
+					<span>
+						<div className={styles.react_player}>
+							<ReactPlayer
+								url={favSongs.preview}
+								width="175px"
+								height="25px"
+								playing={false}
+								controls={true}
+								volume={0.3}
+							/>
+						</div>
+					</span>
+					<span> | </span>
+					{/* <span>{favSongs.id} </span>	
 					<span> | </span>
 					<span>{favSongs.id} </span>	
 					<span> | </span>
 					<span>{favSongs.id} </span>	
 					<span> | </span>
-					<span>{favSongs.id} </span>	
-					<span> | </span>
-					<span>{favSongs.id} </span>	
-							 */}
+					<span>{favSongs.id} </span>	 */}
+
 					<button
 						onClick={() => deleteFavorites(song.id)}
 						className={styles.favorite_button}>

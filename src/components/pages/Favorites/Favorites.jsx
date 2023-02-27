@@ -3,7 +3,10 @@ import React, { Fragment, useContext, useState, useEffect } from "react";
 import FavoriteCard from "./FavoriteCard";
 import AuthContext from "../../../store/authContext";
 import { useDispatch } from "react-redux";
-import { setLoadingFalse, setLoadingTrue } from "../../../redux/slices/loadingSlice";
+import {
+	setLoadingFalse,
+	setLoadingTrue,
+} from "../../../redux/slices/loadingSlice";
 
 import styles from "./Favorites.module.css";
 
@@ -56,6 +59,13 @@ const Favorites = () => {
 		<Fragment>
 			<div className={styles.favorites_position}>
 				<div className={styles.title}>{authCtx.username}'s Favorite Songs</div>
+				<div className={styles.favorites_labels}>
+					<span>Album Cover</span>
+					<span>|</span>
+					<span>Song</span>
+					<span>|</span> <span>Artist</span>
+					<span>|</span>
+				</div>
 				{mappedFavorites}
 			</div>
 		</Fragment>
