@@ -1,13 +1,19 @@
+import axios from "axios";
 import React, { Fragment, useContext, useState, useEffect } from "react";
 import FavoriteCard from "./FavoriteCard";
-import axios from "axios";
 import AuthContext from "../../../store/authContext";
+import { useDispatch } from "react-redux";
+import {
+	setLoadingFalse,
+	setLoadingTrue,
+} from "../../../redux/slices/loadingSlice";
 
 import styles from "./Favorites.module.css";
 
 const Favorites = () => {
 	const authCtx = useContext(AuthContext);
 	const [favorites, setFavorites] = useState([]);
+	const dispatch = useDispatch();
 
 	const baseUrl = "http://localhost:4040";
 
@@ -15,23 +21,27 @@ const Favorites = () => {
 		axios
 			.get(baseUrl + "/favorite")
 			.then((res) => {
-				setFavorites(res.data);
 				console.log(res.data);
+				setFavorites(res.data);
+				dispatch(setLoadingFalse());
 			})
 			.catch((err) => {
+				console.log(err);
 				console.log("Error in getAllFavorites");
+				dispatch(setLoadingFalse());
 			});
 	};
 
 	useEffect(() => {
+		dispatch(setLoadingTrue());
 		getAllFavorites();
-	}, []);
+	}, [dispatch]);
 
 	const deleteFavoritesHandler = (id) => {
 		axios
 			.delete(baseUrl + "/favorite/" + id)
 			.then(() => {
-				console.log("Song deleted");
+				dispatch(setLoadingFalse());
 				getAllFavorites();
 			})
 			.catch((err) => {
@@ -49,6 +59,13 @@ const Favorites = () => {
 		<Fragment>
 			<div className={styles.favorites_position}>
 				<div className={styles.title}>{authCtx.username}'s Favorite Songs</div>
+				<div className={styles.favorites_labels}>
+					<span>Album Cover</span>
+					<span>|</span>
+					<span>Song</span>
+					<span>|</span> <span>Artist</span>
+					<span>|</span>
+				</div>
 				{mappedFavorites}
 			</div>
 		</Fragment>
