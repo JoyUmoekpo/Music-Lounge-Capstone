@@ -1,6 +1,6 @@
+import axios from "axios";
 import React, { useState } from "react";
 
-import axios from "axios";
 import NewsCard from "./NewsCard";
 import styles from "./News.module.css";
 
@@ -14,7 +14,6 @@ const News = () => {
     axios
       .get(baseUrl + "/everything/" + searchTerm)
       .then((res) => {
-        console.log(res.data.articles);
         setArticles(res.data.articles);
       })
       .catch((err) => {

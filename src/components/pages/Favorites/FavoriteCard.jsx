@@ -63,13 +63,6 @@ const FavoriteCard = ({ song, deleteFavorites }) => {
 						</div>
 					</span>
 					<span> | </span>
-					{/* <span>{favSongs.id} </span>	
-					<span> | </span>
-					<span>{favSongs.id} </span>	
-					<span> | </span>
-					<span>{favSongs.id} </span>	
-					<span> | </span>
-					<span>{favSongs.id} </span>	 */}
 
 					<button
 						onClick={() => deleteFavorites(song.id)}
