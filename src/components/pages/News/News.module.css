@@ -1,9 +1,8 @@
 .news_position {
   width: 750px;
-  height: 950px;
-  margin-top: 75px;
+  margin: 100px;
   margin-left: 325px;
-  margin-bottom: 275px;
+  margin-bottom: 75px;
 }
 
 .title {
@@ -51,7 +50,6 @@
   background-color: var(--primary);
   list-style-type: none;
   word-wrap: break-word;
-  /* overflow-y: auto; */
   border-radius: 15px;
   width: 200px;
   height: 350px;
