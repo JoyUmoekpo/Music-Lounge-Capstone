@@ -12,25 +12,25 @@ const Lyrics = () => {
   const lyricSearch = (e) => {
     e.preventDefault();
 
-    const options = {
-      method: "GET",
-      url: "https://powerlyrics.p.rapidapi.com/getlyricsfromtitleandartist",
-      params: { title: `${song}`, artist: `${artist}` },
-      headers: {
-        "X-RapidAPI-Key": "41fcae3ee6mshf0e229e9e01ab0bp166308jsne9f57a0ecfda",
-        "X-RapidAPI-Host": "powerlyrics.p.rapidapi.com",
-      },
-    };
+    // const options = {
+    //   method: "GET",
+    //   url: "https://powerlyrics.p.rapidapi.com/getlyricsfromtitleandartist",
+    //   params: { title: `${song}`, artist: `${artist}` },
+    //   headers: {
+    //     "X-RapidAPI-Key": "41fcae3ee6mshf0e229e9e01ab0bp166308jsne9f57a0ecfda",
+    //     "X-RapidAPI-Host": "powerlyrics.p.rapidapi.com",
+    //   },
+    // };
 
-    axios
-      .request(options)
-      .then(function (response) {
-        console.log(response.data);
-        setLyrics(response.data)
-      })
-      .catch(function (error) {
-        console.error(error);
-      });
+    // axios
+    //   .request(options)
+    //   .then(function (response) {
+    //     console.log(response.data);
+    //     setLyrics(response.data)
+    //   })
+    //   .catch(function (error) {
+    //     console.error(error);
+    //   });
   };
 
   const mappedLyrics = Object.keys(lyrics).map((key) => {
