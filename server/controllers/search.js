@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 module.exports = {
-  search: async (req, res) => {
+  getSongResults: async (req, res) => {
     try {
       const title = req.params.search_item;
 
@@ -39,6 +39,14 @@ module.exports = {
     } catch (error) {
       console.error(error);
       res.status(400).send('ERROR IN getNews function');      
+    }
+  },
+  getLyrics: async (req, res) => {
+    try {
+      
+    } catch (error) {
+      console.error(error);
+      res.status(400).send('ERROR IN getLLyrics function');      
     }
   }
 }
