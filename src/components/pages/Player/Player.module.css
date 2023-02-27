@@ -1,5 +1,5 @@
 .player_position {
-  margin-top: 100px;
+  margin: 100px;
 }
 
 .title {
@@ -16,7 +16,7 @@
   width: 700px;
   height: 75px;
   margin-top: 25px;
-  margin-left: 350px;
+  margin-left: 250px;
 }
 
 .player_icons {

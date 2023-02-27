@@ -1,5 +1,5 @@
 .playlist_position {
-  margin-top: 100px;
+  margin: 100px;
 }
 
 .title {
@@ -16,7 +16,7 @@
   width: 175px;
   font-size: 15px;
   margin-top: 25px;
-  margin-left: 625px;
+  margin-left: 515px;
   padding: 10px;
 }
 
