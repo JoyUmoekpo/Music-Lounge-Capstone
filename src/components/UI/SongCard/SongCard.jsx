@@ -12,7 +12,7 @@ const SongCard = ({ song }) => {
 		axios
 			.post(`${url}/favorite`, {
 				song_id,
-				user_id: localStorage.getItem("userId"),
+				userId: localStorage.getItem("userId"),
 			})
 			.then((res) => {
 				console.log(res.data);

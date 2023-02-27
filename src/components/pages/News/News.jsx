@@ -1,4 +1,5 @@
 import axios from "axios";
+import { BiSearch } from "react-icons/bi"; 
 import React, { useState } from "react";
 
 import NewsCard from "./NewsCard";
@@ -29,6 +30,7 @@ const News = () => {
     <div className={styles.news_position}>
       <div className={styles.title}>Search for Artist News</div>
       <div className={styles.news_search_container}>
+      <BiSearch className={styles.search_icon} color="#fff" />
         <input
           type="text"
           value={searchTerm}
