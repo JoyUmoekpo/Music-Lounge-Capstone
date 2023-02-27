@@ -41,7 +41,7 @@ const Favorites = () => {
 		axios
 			.delete(baseUrl + "/favorite/" + id)
 			.then(() => {
-				dispatch(setLoadingFalse());
+				dispatch(setLoadingTrue());
 				getAllFavorites();
 			})
 			.catch((err) => {
