@@ -1,4 +1,4 @@
-.player_position {
+.lyrics_position {
   margin: 100px;
 }
 
@@ -8,17 +8,50 @@
   margin-left: 250px;
 }
 
-.player_container {
-  background-color: var(--secondary);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 700px;
-  height: 75px;
-  margin-top: 25px;
-  margin-left: 250px;
+.lyric_form {
+  margin-top: 15px;
+  margin-left: 325px;
 }
 
-.player_icons {
-  margin: 25px;
+.lyric_input {
+  background-color: var(--secondary);
+  color: var(--gray);
+  text-align: center;
+  width: 225px;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+.lyric_button {
+  background-color: var(--tertiary);
+  color: var(--primary);
+  width: 75px;
+  margin-left: 15px;
+  padding: 10px;
+  border: none;
+}
+
+.lyric_container {
+  width: 700px;
+  height: 10px;
+  margin-left: 275px;
+  margin-bottom: 10px;
+}
+
+.lyric_labels {
+  color: var(--tertiary)
+}
+
+.lyric_info {
+  color: var(--tertiary)
+}
+
+.lyric_section {
+  /* margin-bottom: 15px; */
+  /* display: flex;
+  flex-direction: column; */
 }

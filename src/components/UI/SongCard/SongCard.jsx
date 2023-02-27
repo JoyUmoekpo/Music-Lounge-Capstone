@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactPlayer from "react-player";
 import axios from "axios";
 
@@ -6,6 +6,7 @@ import styles from "./SongCard.module.css";
 
 const SongCard = ({ song }) => {
 	const url = "http://localhost:4040";
+	const [isFavorited, setIsFavorited] = useState(false);
 
 	const handleClick = (song_id) => {
 		axios
@@ -15,6 +16,8 @@ const SongCard = ({ song }) => {
 			})
 			.then((res) => {
 				console.log(res.data);
+				alert("Song has been added to favorites");
+				setIsFavorited(true);
 			})
 			.catch((err) => {
 				console.log(err.message);
@@ -36,8 +39,10 @@ const SongCard = ({ song }) => {
 			</div>
 			<button
 				className={styles.song_button}
-				onClick={() => handleClick(song.id)}>
-				Favorite Song
+				onClick={() => handleClick(song.id)}
+				disabled={isFavorited}
+			>
+				{isFavorited ? "Favorited" : "Favorite Song"}
 			</button>
 			<div className={styles.react_player}>
 				<ReactPlayer
