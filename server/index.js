@@ -29,7 +29,7 @@ app.post("/register", register);
 app.post("/login", login);
 app.get("/search/:search_item", getSongResults );
 app.post("/favorite", addFavorite);
-app.get("/favorite", getFavorites);
+app.get("/favorite/:id", getFavorites);
 app.get("/track/:id", getOneSong)
 app.get("/everything/:news_item", getNews)
 app.delete("/favorite/:id", deleteFavorites)

@@ -19,7 +19,7 @@ const Favorites = () => {
 
 	const getAllFavorites = () => {
 		axios
-			.get(baseUrl + "/favorite")
+			.get(baseUrl + "/favorite/"+ localStorage.getItem("userId"))
 			.then((res) => {
 				console.log(res.data);
 				setFavorites(res.data);
