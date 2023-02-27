@@ -1,23 +1,38 @@
+
 .loading_modal {
   position: absolute;
-  height: 100vh;
-  width: 100vw;
+  height: 50vh;
+  width: 55vw;
+  margin-top: 50px;
+  margin-left: 355px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .loading_background {
   position: absolute;
   opacity: 0.85;
   height: 100%;
   width: 100%;
-  background-color: black;
+  background-color: var(--primary);
 }
+
+@keyframes spinner {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
 .loader {
-  border: 1vw solid var(--magnolia);
-  border-top: 1vw solid var(--cerulean-crayola); /* Blue */
+  border: 1vw solid var(--tertiary);
+  border-top: 1vw solid var(--secondary);
   border-radius: 50%;
-  width: 3vw;
-  height: 3vw;
-  animation: spin 0.8s linear infinite;
+  z-index: 2;
+  width: 10vw;
+  height: 10vw;
+  animation: spinner 1s linear infinite;
 }

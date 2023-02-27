@@ -1,6 +1,7 @@
 span {
-  font-size: 25px;
-  margin-right: 5px;
+  text-align: center;
+  font-size: 20px;
+  margin-right: 1px;
 }
 
 .favorites_position {
@@ -20,7 +21,6 @@ span {
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  
   width: 775px;
   margin-top: 25px;
   padding: 20px;
@@ -31,4 +31,9 @@ span {
   width: 175px;
   font-size: 15px;
   padding: 10px;
+}
+
+.favorite_image {
+  width: 100px;
+  height: 100px;
 }

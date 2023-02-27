@@ -2,6 +2,8 @@ import "./App.css";
 
 import { useContext } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
+import { selectLoading } from "./redux/slices/loadingSlice";
+import { useSelector } from "react-redux";
 
 import Auth from "./components/pages/Auth/Auth";
 import Home from "./components/pages/Home/Home";
@@ -13,16 +15,19 @@ import Playlist from "./components/pages/Playlist/Playlist";
 import Favorites from "./components/pages/Favorites/Favorites";
 import Player from "./components/pages/Player/Player";
 import News from "./components/pages/News/News";
+import LoadingModal from "./components/UI/LoadingModal/LoadingModal";
 
 import AuthContext from "./store/authContext";
 
 const App = () => {
 	const authCtx = useContext(AuthContext);
+	let isLoading = useSelector(selectLoading);
 
 	return (
 		<div className="app">
+			{isLoading && <LoadingModal />}
 			<Header />
-			<Sidebar/>
+			<Sidebar />
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route
@@ -49,9 +54,7 @@ const App = () => {
 				/>
 				<Route
 					path="/news"
-					element={
-						authCtx.token ? <News /> : <Navigate to="/auth" />
-					}
+					element={authCtx.token ? <News /> : <Navigate to="/auth" />}
 				/>
 				<Route path="*" element={<Navigate to="/" />} />
 			</Routes>
