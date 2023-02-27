@@ -1,9 +1,9 @@
 import React, { Fragment } from "react";
 import { BiPlayCircle, BiPauseCircle } from "react-icons/bi";
 
-import styles from "./Player.module.css";
+import styles from "./Lyrics.module.css";
 
-const Player = () => {
+const Lyrics = () => {
 	return (
 		<Fragment>
 			<div className={styles.player_position}>
@@ -20,4 +20,4 @@ const Player = () => {
 	);
 };
 
-export default Player;
+export default Lyrics;

@@ -28,8 +28,8 @@ const Sidebar = () => {
 							</NavLink>
 						</li>
 						<li className={styles.sidebar_links}>
-							<NavLink to="/player">
-								<button className={styles.sidebar_buttons}>Player</button>
+							<NavLink to="/lyrics">
+								<button className={styles.sidebar_buttons}>Lyrics</button>
 							</NavLink>
 						</li>
 						<li className={styles.sidebar_links}>
