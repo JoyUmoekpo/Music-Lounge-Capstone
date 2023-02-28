@@ -19,6 +19,16 @@ const Profile = () => {
 							See your favorites
 						</button>
 					</NavLink>
+					<NavLink to="/lyrics">
+						<button className={styles.profile_button}>
+							Search for Lyrics
+						</button>
+					</NavLink>
+					<NavLink to="/news">
+						<button className={styles.profile_button}>
+							Search for Artist News
+						</button>
+					</NavLink>
 				</div>
 				<SearchBar />
 			</div>
