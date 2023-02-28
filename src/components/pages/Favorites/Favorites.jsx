@@ -58,7 +58,7 @@ const Favorites = () => {
 	return (
 		<Fragment>
 			<div className={styles.favorites_position}>
-				<div className={styles.title}>{authCtx.username}'s Favorite Songs</div>
+				<h1 className={styles.title}>{authCtx.username}'s Favorite Songs</h1>
 				<div className={styles.favorites_labels}>
 					<span>Album Cover</span>
 					<span>|</span>

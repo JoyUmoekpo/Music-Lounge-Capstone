@@ -28,7 +28,7 @@ const News = () => {
 
   return (
     <div className={styles.news_position}>
-      <div className={styles.title}>Search for Artist News</div>
+      <h1 className={styles.title}>Search for Artist News</h1>
       <div className={styles.news_search_container}>
       {/* <BiSearch className={styles.search_icon} color="#fff" /> */}
         <input
