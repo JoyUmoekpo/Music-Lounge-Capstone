@@ -1,5 +1,4 @@
 import axios from "axios";
-import { BiSearch } from "react-icons/bi"; 
 import React, { useState } from "react";
 
 import NewsCard from "./NewsCard";
@@ -16,6 +15,7 @@ const News = () => {
       .get(baseUrl + "/everything/" + searchTerm)
       .then((res) => {
         setArticles(res.data.articles);
+        setSearchTerm("")
       })
       .catch((err) => {
         console.log("Error in getMusicNews");
