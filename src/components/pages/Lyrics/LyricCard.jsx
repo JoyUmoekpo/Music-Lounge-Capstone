@@ -16,11 +16,15 @@ const LyricCard = ({ lyrics }) => {
 				<div className={styles.title_author}>
 					<h2>{title}</h2>
 					<h3>{author}</h3>
+					<h4>
+						<a href={link} rel="noreferrer" target="_blank">
+							Link to Genius Lyrics
+						</a>
+					</h4>
 				</div>
 			</div>
 			<div className={styles.card_body}>
 				<p>{lyricText}</p>
-				<a href={link} rel="noreferrer" target="_blank">Link to Genius Lyrics</a>
 			</div>
 		</div>
 	);
