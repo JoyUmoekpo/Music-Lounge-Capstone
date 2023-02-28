@@ -1,13 +1,13 @@
 .news_position {
-  width: 750px;
   margin: 100px;
-  margin-left: 300px;
-  margin-bottom: 150px;
+  margin-left: 25px
 }
 
 .title {
   text-align: center;
   font-size: 35px;
+  margin-left: 325px;
+  margin-bottom: 15px;
 }
 
 .search_icon {
@@ -23,6 +23,7 @@
   width: 240px;
   font-size: 15px;
   font-weight: 500;
+  margin-left: 300px;
   padding: 10px;
   border: none;
   border-radius: 20px;

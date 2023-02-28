@@ -12,7 +12,7 @@ const Profile = () => {
 	return (
 		<Fragment>
 			<div className={styles.profile_position}>
-				<div className={styles.title}>{authCtx.username}'s Profile Page</div>
+				<h1 className={styles.title}>{authCtx.username}'s Profile Page</h1>
 				<div className={styles.profile_button_container}>
 					<button className={styles.profile_button}>Create a playlist</button>
 					<NavLink to="/playlist">

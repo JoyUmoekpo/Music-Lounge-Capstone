@@ -1,16 +1,17 @@
 .lyrics_position {
   margin: 100px;
+  margin-left: 75px;
 }
 
 .title {
   text-align: center;
   font-size: 35px;
-  margin-left: 150px;
+  margin-left: 250px;
 }
 
 .lyric_form {
   margin-top: 15px;
-  margin-left: 375px;
+  margin-left: 450px;
 }
 
 .lyric_input {
