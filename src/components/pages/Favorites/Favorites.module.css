@@ -4,6 +4,14 @@ span {
   margin-right: 1px;
 }
 
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px
+}
+
 .favorites_position {
   margin: 100px;
   margin-bottom: 550px;
