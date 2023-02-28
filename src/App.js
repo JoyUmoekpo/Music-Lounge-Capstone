@@ -11,7 +11,6 @@ import Header from "./components/UI/Header/Header";
 import Sidebar from "./components/UI/Sidebar/Sidebar";
 import Footer from "./components/UI/Footer/Footer";
 import Profile from "./components/pages/Profile/Profile";
-import Playlist from "./components/pages/Playlist/Playlist";
 import Favorites from "./components/pages/Favorites/Favorites";
 import Lyrics from "./components/pages/Lyrics/Lyrics";
 import News from "./components/pages/News/News";
@@ -37,10 +36,6 @@ const App = () => {
 				<Route
 					path="/profile"
 					element={authCtx.token ? <Profile /> : <Navigate to="/auth" />}
-				/>
-				<Route
-					path="/playlist"
-					element={authCtx.token ? <Playlist /> : <Navigate to="/auth" />}
 				/>
 
 				<Route

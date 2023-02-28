@@ -14,12 +14,6 @@ const Profile = () => {
 			<div className={styles.profile_position}>
 				<h1 className={styles.title}>{authCtx.username}'s Profile Page</h1>
 				<div className={styles.profile_button_container}>
-					<button className={styles.profile_button}>Create a playlist</button>
-					<NavLink to="/playlist">
-						<button className={styles.profile_button}>
-							See your playlists
-						</button>
-					</NavLink>
 					<NavLink to="/favorites">
 						<button className={styles.profile_button}>
 							See your favorites
