@@ -30,6 +30,11 @@ const Home = () => {
 					A Music Hot Spot
 				</summary>
 			</div>
+			<div className={styles.home_text}>
+				<p className={styles.home_text_background}>
+					Click on Register in the top right to begin.
+				</p>
+			</div>
 		</div>) : (<Profile />)}
 		</Fragment>
 	);
