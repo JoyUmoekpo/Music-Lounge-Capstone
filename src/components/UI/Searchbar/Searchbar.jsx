@@ -1,6 +1,6 @@
+import axios from "axios";
 import React, { useState } from "react";
 import { BiSearch } from "react-icons/bi"; 
-import axios from "axios";
 
 import SongCard from "../../UI/SongCard/SongCard";
 
@@ -9,6 +9,7 @@ import styles from "./Searchbar.module.css";
 const SearchBar = () => {
 	const [search, setSearch] = useState("");
 	const [songs, setSongs] = useState([]);
+	const [favorites, setFavorites] = useState([]);
 
 	const url = "http://localhost:4040";
 
@@ -17,11 +18,44 @@ const SearchBar = () => {
 			console.log(res.data.data);
 			setSongs(res.data.data);
 			setSearch("")
-		});
+		})
+		.then(
+			axios
+			.get(url + "/favorite/"+ localStorage.getItem("userId"))
+			.then((res) => {
+				console.log(res.data);
+				const {data} = res;
+				const filteredData = data.map((element) => element.song_id);
+				setFavorites(filteredData);
+			})
+			.catch((err) => {
+				console.log(err);
+				console.log("Error in getAllFavorites");
+			})
+		)
 	};
 
+	const fetchFavoriteData = () => {
+		console.log("Fetched");
+
+		axios
+			.get(url + "/favorite/"+ localStorage.getItem("userId"))
+			.then((res) => {
+				console.log("Data Fetched", res.data);
+				const {data} = res;
+				const filteredData = data.map((element) => element.song_id);
+				setFavorites(filteredData);
+			})
+			.catch((err) => {
+				console.log(err);
+				console.log("Error in getAllFavorites");
+			})
+	}
+
+
 	const songDisplay = songs.map((song) => {
-		return <SongCard song={song} key={song.id} />
+		const isFavorited = favorites.includes(song.id);
+		return <SongCard song={song} key={song.id} isFavorited={isFavorited} favData={fetchFavoriteData}/>
 	});
 
 	return (

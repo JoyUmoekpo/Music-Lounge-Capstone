@@ -5,12 +5,12 @@
 .title {
   text-align: center;
   font-size: 35px;
-  margin-left: 250px;
+  margin-left: 150px;
 }
 
 .lyric_form {
   margin-top: 15px;
-  margin-left: 325px;
+  margin-left: 375px;
 }
 
 .lyric_input {
@@ -24,34 +24,47 @@
   border: none;
   border-radius: 20px;
   margin-right: 10px;
+  margin-bottom: 25px;
 }
 
 .lyric_button {
   background-color: var(--tertiary);
   color: var(--primary);
   width: 75px;
-  margin-left: 15px;
   padding: 10px;
   border: none;
 }
 
-.lyric_container {
+.lyrics_card {
   width: 700px;
-  height: 10px;
-  margin-left: 275px;
-  margin-bottom: 10px;
+  height: 550px;
+  margin-left: 200px;
+  margin-bottom: 500px;
+  padding-bottom: 250px;
 }
 
-.lyric_labels {
-  color: var(--tertiary)
+.card_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  gap: 35px;
 }
 
-.lyric_info {
-  color: var(--tertiary)
+.thumbnail {
+  width: 200px;
+  height: 200px;
 }
 
-.lyric_section {
-  /* margin-bottom: 15px; */
-  /* display: flex;
-  flex-direction: column; */
+.title_author h2 {
+  margin-bottom: 25px;
+}
+
+.card_body {
+  margin-left: 50px;
+}
+
+.card_body p {
+  margin-bottom: 50px;
 }

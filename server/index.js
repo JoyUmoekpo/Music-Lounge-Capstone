@@ -7,7 +7,7 @@ const cors = require("cors");
 
 const { sequelize } = require("./util/database");
 const { register, login } = require("./controllers/auth");
-const { getSongResults, getOneSong, getNews } = require("./controllers/search");
+const { getSongResults, getOneSong, getNews, getLyrics } = require("./controllers/search");
 const { addFavorite, getFavorites, deleteFavorites } = require("./controllers/favorites");
 
 
@@ -29,9 +29,10 @@ app.post("/register", register);
 app.post("/login", login);
 app.get("/search/:search_item", getSongResults );
 app.post("/favorite", addFavorite);
-app.get("/favorite", getFavorites);
+app.get("/favorite/:id", getFavorites);
 app.get("/track/:id", getOneSong)
-app.get("/everything/:news_item", getNews)
+app.get("/everything/:news_item", getNews);
+app.get("/lyrics/:lyric_search", getLyrics);
 app.delete("/favorite/:id", deleteFavorites)
 
 

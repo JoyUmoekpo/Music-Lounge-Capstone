@@ -4,20 +4,21 @@ import axios from "axios";
 
 import styles from "./SongCard.module.css";
 
-const SongCard = ({ song }) => {
+const SongCard = ({ song, isFavorited, favData }) => {
 	const url = "http://localhost:4040";
-	const [isFavorited, setIsFavorited] = useState(false);
+	const [favorited, setFavorited] = useState(isFavorited);
 
 	const handleClick = (song_id) => {
 		axios
 			.post(`${url}/favorite`, {
 				song_id,
-				user_id: localStorage.getItem("userId"),
+				userId: localStorage.getItem("userId"),
 			})
 			.then((res) => {
 				console.log(res.data);
-				alert("Song has been added to favorites");
-				setIsFavorited(true);
+				alert(`Song has been ${favorited ? "removed from" : "added to"} favorites`);
+				favData();
+				setFavorited(!favorited);
 			})
 			.catch((err) => {
 				console.log(err.message);
@@ -38,11 +39,12 @@ const SongCard = ({ song }) => {
 				<h3 className={styles.song_text}>Artist: {song.artist.name}</h3>
 			</div>
 			<button
+				type="button"
 				className={styles.song_button}
 				onClick={() => handleClick(song.id)}
-				disabled={isFavorited}
+				disabled={favorited}
 			>
-				{isFavorited ? "Favorited" : "Favorite Song"}
+				{favorited ? "Remove From Favorites" : "Add to Favorites"}
 			</button>
 			<div className={styles.react_player}>
 				<ReactPlayer
@@ -57,5 +59,6 @@ const SongCard = ({ song }) => {
 		</div>
 	);
 };
+
 
 export default SongCard;

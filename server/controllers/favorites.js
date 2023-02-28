@@ -11,8 +11,9 @@ module.exports = {
 		}
 	},
 	getFavorites: async (req, res) => {
-		try {			
-			const favorites = await Favorites.findAll();
+		try {
+			const {id} = req.params			
+			const favorites = await Favorites.findAll({where: {userId: +id}});
 			res.status(200).send(favorites);
 		} catch (error) {
 			console.log("ERROR IN getFavorites", error);
