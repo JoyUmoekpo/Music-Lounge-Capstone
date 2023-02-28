@@ -43,10 +43,13 @@ module.exports = {
   },
   getLyrics: async (req, res) => {
     try {
-      
+      const title = req.params.lyric_search;
+
+      const response = await axios.get(`https://some-random-api.ml/lyrics?title=${title}`);
+      res.send(response.data);
     } catch (error) {
       console.error(error);
-      res.status(400).send('ERROR IN getLLyrics function');      
+      res.status(400).send('ERROR IN getLyrics function');      
     }
   }
 }
