@@ -14,6 +14,7 @@ import Profile from "./components/pages/Profile/Profile";
 import Favorites from "./components/pages/Favorites/Favorites";
 import Lyrics from "./components/pages/Lyrics/Lyrics";
 import News from "./components/pages/News/News";
+import Information from "./components/pages/Information/Information";
 import LoadingModal from "./components/UI/LoadingModal/LoadingModal";
 
 import AuthContext from "./store/authContext";
@@ -50,6 +51,10 @@ const App = () => {
 				<Route
 					path="/news"
 					element={authCtx.token ? <News /> : <Navigate to="/auth" />}
+				/>
+					<Route
+					path="/information"
+					element={authCtx.token ? <Information /> : <Navigate to="/auth" />}
 				/>
 				<Route path="*" element={<Navigate to="/" />} />
 			</Routes>

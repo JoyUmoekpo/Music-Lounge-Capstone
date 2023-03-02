@@ -34,6 +34,13 @@ const Sidebar = () => {
 								</button>
 							</NavLink>
 						</li>
+						<li className={styles.sidebar_links}>
+							<NavLink to="/information">
+								<button className={styles.sidebar_buttons}>
+									Information
+								</button>
+							</NavLink>
+						</li>
 					</ul>
 				) : (
 					""

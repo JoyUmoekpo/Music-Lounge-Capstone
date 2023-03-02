@@ -4,7 +4,6 @@ span {
   margin-right: 1px;
 }
 
-
 .row {
   display: flex;
   justify-content: center;
@@ -52,6 +51,10 @@ span {
   width: 175px;
   font-size: 15px;
   padding: 10px;
+}
+
+.favorite_button:active {
+  transform: translateY(10px);
 }
 
 .favorite_image {

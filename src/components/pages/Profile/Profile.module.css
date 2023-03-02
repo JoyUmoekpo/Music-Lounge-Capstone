@@ -26,3 +26,7 @@
   padding: 10px;
   border: none;
 }
+
+.profile_button:active {
+	transform: translateY(10px);
+}
