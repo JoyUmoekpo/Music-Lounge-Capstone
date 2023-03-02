@@ -34,7 +34,7 @@ module.exports = {
     try {
       const item = req.params.news_item;
 
-      const response = await axios.get(`https://newsapi.org/v2/everything?q=${item}&from=2023-02-01&sortBy=popularity&apiKey=7477cb63460f442e8b7184074c5689c2`);
+      const response = await axios.get(`https://newsapi.org/v2/everything?q=${item}&from=2023-02-15&sortBy=popularity&apiKey=7477cb63460f442e8b7184074c5689c2`);
       res.send(response.data)
     } catch (error) {
       console.error(error);
