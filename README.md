@@ -62,7 +62,7 @@ I chose to build Music Lounge because I wanted to create an application that cou
 ## Application Image(s)
 ![Homepage](./assets/homepage.jpg)
 ![Profile Page](./src/assets/profile.jpg)
-![Favorites Page](./src/assets/favorites.jpg)
+![Favorites Page](./assets/favorites.jpg)
 ![Lyrics Page](./src/assets/lyrics.jpg)
 ![News Page](./src/assets/news.jpg)
 
