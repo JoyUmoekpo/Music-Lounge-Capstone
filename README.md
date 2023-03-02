@@ -12,7 +12,7 @@
 ## Description
 Welcome to Music Lounge!
 
-Have you been looking for a seemless platform to search for music, song lyrics, and artists? Well, I present you with Music Lounge! In addition to all these features, Music Lonuge also allows users to search for and favorite songs that they may not be able to find on other music applications.
+Have you been looking for a seamless platform to search for music, song lyrics, and artist news? Well, I present you with Music Lounge! In addition to all these features, Music Lounge also allows users to search for and favorite songs that they may not be able to find on other music applications.
 
 I chose to build Music Lounge because I wanted to create an application that could search a large library of music and allow users to add songs to a personalized favorites list including songs they may not be able to find on other applications.
 
