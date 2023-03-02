@@ -4,7 +4,7 @@
 [![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/en/)
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 [![Redux](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)](https://react-redux.js.org/)
-[![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)] (https://reactrouter.com/en/main)
+[React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white) 
 [![License: Unsplash](https://img.shields.io/badge/License-Unsplash-green.svg)](https://opensource.org/licenses/Unsplash)
 [![GitHub latest commit](https://img.shields.io/github/last-commit/JoyUmoekpo/Music-Lounge-Capstone
 )](https://github.com/JoyUmoekpo/Music-Lounge-Capstone/commit/main)
