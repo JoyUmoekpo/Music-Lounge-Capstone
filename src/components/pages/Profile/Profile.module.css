@@ -21,8 +21,12 @@
 .profile_button {
   background-color: var(--tertiary);
   color: var(--primary);
-  width: 175px;
+  width: 200px;
   font-size: 15px;
   padding: 10px;
   border: none;
+}
+
+.profile_button:active {
+	transform: translateY(10px);
 }

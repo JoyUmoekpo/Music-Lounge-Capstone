@@ -1,0 +1,14 @@
+.information_container {
+  text-align: center;
+  margin: 100px;
+  margin-left: 300px;
+}
+
+.information_container h1 {
+  text-decoration: underline var(--tertiary);
+  margin-bottom: 10px;
+}
+
+.information_container p {
+  margin-bottom: 10px;
+}

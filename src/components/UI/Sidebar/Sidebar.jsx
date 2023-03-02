@@ -18,11 +18,6 @@ const Sidebar = () => {
 							</NavLink>
 						</li>
 						<li className={styles.sidebar_links}>
-							<NavLink to="/playlist">
-								<button className={styles.sidebar_buttons}>Playlist</button>
-							</NavLink>
-						</li>
-						<li className={styles.sidebar_links}>
 							<NavLink to="/favorites">
 								<button className={styles.sidebar_buttons}>Favorites</button>
 							</NavLink>
@@ -36,6 +31,13 @@ const Sidebar = () => {
 							<NavLink to="/news">
 								<button className={styles.sidebar_buttons}>
 									News
+								</button>
+							</NavLink>
+						</li>
+						<li className={styles.sidebar_links}>
+							<NavLink to="/information">
+								<button className={styles.sidebar_buttons}>
+									Information
 								</button>
 							</NavLink>
 						</li>

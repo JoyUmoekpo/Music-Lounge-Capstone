@@ -31,6 +31,10 @@
   border: none;
 }
 
+.news_button:active {
+	transform: translateY(10px);
+}
+
 .news_search_container {
   margin-top: 10px;
   margin-left: 200px;

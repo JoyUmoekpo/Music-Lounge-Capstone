@@ -14,10 +14,15 @@
 }
 
 .home_text main {
-  margin-top: 175px;
+  margin-top: 225px;
 }
 
 .home_text summary {
   font-size: 35px;
+  margin-top: 50px;
+}
+
+.home_text p {
+  font-size: 20px;
   margin-top: 50px;
 }

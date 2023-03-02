@@ -36,6 +36,11 @@
   border: none;
 }
 
+
+.lyric_button:active {
+	transform: translateY(10px);
+}
+
 .lyrics_card {
   width: 825px;
   height: 500px;

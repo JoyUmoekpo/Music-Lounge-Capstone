@@ -11,10 +11,10 @@ import Header from "./components/UI/Header/Header";
 import Sidebar from "./components/UI/Sidebar/Sidebar";
 import Footer from "./components/UI/Footer/Footer";
 import Profile from "./components/pages/Profile/Profile";
-import Playlist from "./components/pages/Playlist/Playlist";
 import Favorites from "./components/pages/Favorites/Favorites";
 import Lyrics from "./components/pages/Lyrics/Lyrics";
 import News from "./components/pages/News/News";
+import Information from "./components/pages/Information/Information";
 import LoadingModal from "./components/UI/LoadingModal/LoadingModal";
 
 import AuthContext from "./store/authContext";
@@ -38,10 +38,6 @@ const App = () => {
 					path="/profile"
 					element={authCtx.token ? <Profile /> : <Navigate to="/auth" />}
 				/>
-				<Route
-					path="/playlist"
-					element={authCtx.token ? <Playlist /> : <Navigate to="/auth" />}
-				/>
 
 				<Route
 					path="/favorites"
@@ -55,6 +51,10 @@ const App = () => {
 				<Route
 					path="/news"
 					element={authCtx.token ? <News /> : <Navigate to="/auth" />}
+				/>
+					<Route
+					path="/information"
+					element={authCtx.token ? <Information /> : <Navigate to="/auth" />}
 				/>
 				<Route path="*" element={<Navigate to="/" />} />
 			</Routes>
