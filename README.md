@@ -2,7 +2,7 @@
 
 [![JavaScript](https://img.shields.io/badge/--F7DF1E?logo=javascript&logoColor=000)](https://www.javascript.com/)
 [![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/en/)
-[![[React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 [![Redux](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)](https://react-redux.js.org/)
 [![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)] (https://reactrouter.com/en/main)
 [![License: Unsplash](https://img.shields.io/badge/License-Unsplash-green.svg)](https://opensource.org/licenses/Unsplash)
@@ -60,7 +60,7 @@ I chose to build Music Lounge because I wanted to create an application that cou
 * The ability to search for upcoming artist events
 
 ## Application Image(s)
-![Homepage](./src/assets/homepage.jpg)
+![Homepage](./assets/homepage.jpg)
 ![Profile Page](./src/assets/profile.jpg)
 ![Favorites Page](./src/assets/favorites.jpg)
 ![Lyrics Page](./src/assets/lyrics.jpg)
